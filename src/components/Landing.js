@@ -4,26 +4,35 @@ import Rellax from 'rellax'
 
 const Landing = () => {
 
+  // useEffect(() => {
+  //   const rellax = new Rellax('.rellax')
+  // }, [])
+
+  function scroll() {
+    window.scrollTo(0, 733)
+  }
+
   return (
 
     <main>
       <section>
         <div>
           <h1> SEANGPACHAREONSUB </h1>
-          <p> Hello world. Let me lead you through who I am and what I do. </p>
+          <p> Hello world. Let me take you through who I am and what I do. </p>
         </div>
 
-        <ion-icon name="arrow-down-sharp"></ion-icon>
-        <svg height="410" width="410">
+        <span onClick={scroll}> Click to scroll </span>
+        <ion-icon onClick={scroll} name="arrow-down-sharp"></ion-icon>
+        <svg onClick={scroll} height="410" width="410">
           <circle cx="205" cy="205" r="200" />
         </svg>
       </section>
 
   
       <section>
-        <div> <h1> KS </h1> </div>
-        <div> <h1> EA </h1> </div>
-        <div> <h1> NG </h1> </div>
+        <div> <p> KS </p> </div>
+        <div> <p> EA </p> </div>
+        <div> <p> NG </p> </div>
       </section>
     </main>
   )

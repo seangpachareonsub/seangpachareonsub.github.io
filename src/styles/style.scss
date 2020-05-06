@@ -7,6 +7,7 @@
 body, html {
   width: 100vw;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 #root {
@@ -38,18 +39,32 @@ body, html {
         
 
         div {
-          width: 230px;
+          width: 250px;
           transform: translate(70px, 83px);
-          font-family: 'Times New Roman', Times, serif;
+          font-family: 'Courier New', Courier, monospace;
+          color: black;
           
           h1 {
-            font-size: 22px;
+            font-size: 24px;
             margin-bottom: 10px;
-            font-weight: 500;
-            // font-family: 'Raleway';
+            letter-spacing: 0.3px;
           }
           p {
             font-size: 17px;
+          }
+        }
+
+        span {
+          position: absolute;
+          bottom: 165px;
+          left: 164px;
+          font-family: 'raleway';
+          font-size: 14.5px;
+          transition: 0.2s;
+          color: brown;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
           }
         }
 
@@ -58,19 +73,10 @@ body, html {
           bottom: 195px;
           left: 190px;
           font-size: 30px;
-          animation: opacity infinite 2s ease-in;
           &:hover {
             cursor: pointer;
           }
         }
-
-        @keyframes opacity {
-          0% { opacity: 1 }
-          6% { opacity: 1 }
-          80% { opacity: 0 }
-          100% { opacity: 1 }
-        }
-
 
         circle {
           fill: transparent;
@@ -101,7 +107,7 @@ body, html {
             align-self: flex-end;
           }
 
-          h1 {
+          p {
             line-height: 190px;
             font-size: 250px;
             font-family: "Saol Display Regular";
@@ -122,6 +128,7 @@ body, html {
     padding: 4% 6%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     header {
       width: 45%;
@@ -132,6 +139,7 @@ body, html {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
 
       h1 {
         font-size: 35px;
@@ -142,6 +150,44 @@ body, html {
         font-size: 25px;
         color: brown;
         font-weight: 500;
+      }
+    }
+
+    section {
+      width: 100%;
+      height: 85%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:nth-of-type(1) {
+          p {
+            font-size: 21px;
+            font-family: 'Courier New', Courier, monospace; 
+            color: black;
+            letter-spacing: -1px;
+          }
+        }
+        &:nth-of-type(2) {
+          height: 66%;
+          color: black;
+          h1 {
+            font-family: 'raleway';
+            font-size: 25px;
+          }
+          li {
+            list-style: disc;
+            font-family: 'Courier New', Courier, monospace;
+            transform: translate(26px, 25px);
+            font-size: 18px;
+          }
+        }
       }
     }
   }
@@ -211,7 +257,7 @@ body, html {
       section {
         &:nth-of-type(1) {
           height: 250px;
-          circle, ion-icon {
+          circle, ion-icon, span {
             display: none
           }
           div {
@@ -223,7 +269,7 @@ body, html {
           justify-content: flex-start;
           width: 100vw;
           div {
-            h1 {
+            p {
               line-height: 42vw;
               font-size: 54vw;
             }
@@ -236,12 +282,18 @@ body, html {
     // ABOUT
     .about {
       header {
-        width: 85%;
+        width: 100%;
         h1 {
           font-size: 29px;
         }
         span {
           font-size: 19px;
+        }
+      }
+      section {
+        flex-direction: column;
+        div {
+          width: 100%
         }
       }
     }
@@ -267,7 +319,7 @@ body, html {
         &:nth-of-type(2) {
           width: 87%;
           div {
-            h1 {
+            p {
               line-height: 42vw;
               font-size: 50vw;
             }
@@ -279,7 +331,6 @@ body, html {
     // ABOUT
     .about {
       header {
-        width: 100%;
         h1 {
           font-size: 24px;
         }
