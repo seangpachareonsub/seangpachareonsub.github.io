@@ -4,32 +4,31 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   width: 100vw;
   height: 100vh;
 }
 
 #root {
-  width: 100%;
-  height: 100%;
-  // background-color: rgba(251, 249, 249, 0.65);
-  background-color: #303030f6;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: .3%;
+
   main {
-    width: 99.2%;
-    height: 99%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
-    border-radius: 10px;
     background-color: rgba(251, 249, 249, 0.9);
+    // overflow-y: auto;
 
     section {
       height: 100%;
       display: flex;
       flex-direction: column;
+      color: #303030;
 
       &:nth-of-type(1) {
         width: 50%;
@@ -40,14 +39,14 @@ body {
 
         div {
           width: 230px;
-          transform: translate(90px, 83px);
+          transform: translate(70px, 83px);
           font-family: 'Times New Roman', Times, serif;
           
           h1 {
-            font-size: 21px;
+            font-size: 22px;
             margin-bottom: 10px;
             font-weight: 500;
-            font-family: 'Raleway';
+            // font-family: 'Raleway';
           }
           p {
             font-size: 17px;
@@ -59,13 +58,13 @@ body {
           bottom: 195px;
           left: 190px;
           font-size: 30px;
-          animation: reveal infinite 2s ease-in;
+          animation: opacity infinite 2s ease-in;
           &:hover {
             cursor: pointer;
           }
         }
 
-        @keyframes reveal {
+        @keyframes opacity {
           0% { opacity: 1 }
           6% { opacity: 1 }
           80% { opacity: 0 }
@@ -96,17 +95,196 @@ body {
         align-items: flex-start;
         justify-content: center;
         padding-left: 20px;
-        transform: translateY(20px);
-        h1 {
-          line-height: 190px;
-          color: #303030f6;
-          font-size: 250px;
-          font-family: "Saol Display Regular";
-          letter-spacing: 5px;
 
+        div {
           &:nth-of-type(2) {
             align-self: flex-end;
           }
+
+          h1 {
+            line-height: 190px;
+            font-size: 250px;
+            font-family: "Saol Display Regular";
+            letter-spacing: 5px;
+            transform: translateY(22px);
+          }
+        }
+      }
+    }
+  }
+  
+  // ABOUT
+
+  .about {
+    background-color: rgba(251, 249, 249, 0.9);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 4% 6%;
+    display: flex;
+    flex-direction: column;
+
+    header {
+      width: 45%;
+      height: 10%;
+      align-self: flex-end;
+      border-top: 3px solid black;
+      font-family: 'Raleway';
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        font-size: 35px;
+        color: black;
+      }
+
+      span {
+        font-size: 25px;
+        color: brown;
+        font-weight: 500;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 920px) {
+
+    // LANDING
+    main {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 180vw;
+      section {
+        &:nth-of-type(1) {
+          height: 250px;
+          circle, ion-icon {
+            display: none
+          }
+          div {
+            transform: translate(30px, 50px);
+          }
+        }
+        &:nth-of-type(2) {
+          padding-left: 15px;
+          justify-content: flex-start;
+          width: 100vw;
+          div {
+            h1 {
+              line-height: 42vw;
+              font-size: 54vw;
+            }
+          }
+          
+        }
+      }
+    }
+
+    // ABOUT
+    .about {
+      header {
+        width: 85%;
+        h1 {
+          font-size: 29px;
+        }
+        span {
+          font-size: 19px;
+        }
+      }
+    }
+
+    
+  }
+
+  @media only screen and (max-width: 410px) {
+
+   
+    // LANDING
+    main {
+      width: 410px;
+      align-items: center;
+      min-height: 110%;
+      section {
+        &:nth-of-type(1) {
+          align-self: flex-start;
+          div {
+            transform: translate(50px, 50px);
+          }
+        }
+        &:nth-of-type(2) {
+          width: 87%;
+          div {
+            h1 {
+              line-height: 42vw;
+              font-size: 50vw;
+            }
+          }          
+        }
+      }
+    }
+
+    // ABOUT
+    .about {
+      header {
+        width: 100%;
+        h1 {
+          font-size: 24px;
+        }
+        span {
+          font-size: 14px;
         }
       }
     }
