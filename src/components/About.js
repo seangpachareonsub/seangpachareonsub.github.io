@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Rellax from 'rellax'
 
 const About = () => {
 
+  useEffect(() => {
+    const rellax = new Rellax('.rellax')
+  }, [])
 
   return (
     <>
 
-      <div className="about">
+      <div id="about" className='rellax' data-rellax-speed='-5'>
         <header>
           <span> No. 1</span>
           <h1> WHO'S TALKING ?</h1>
         </header>
 
-        <section>
+        <section >
           <div>
             <p>
               I'm Kenn, a Junior Full-stack Developer.
@@ -23,7 +27,8 @@ const About = () => {
               into the professional dimension, where I hope to bring value and grow myself.
             </p>
           </div>
-
+       
+{/* 
           <div>
             <h1> My work implements: </h1>
             <ul>
@@ -34,7 +39,7 @@ const About = () => {
               <li> PostgreSQL & MongoDB </li>
               <li> Git & GitHub </li>
             </ul>
-          </div>
+          </div> */}
 
         </section>
 

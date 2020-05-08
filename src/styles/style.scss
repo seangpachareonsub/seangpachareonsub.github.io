@@ -8,7 +8,11 @@ body,
 html {
   width: 100vw;
   height: 100vh;
-  scroll-behavior: smooth;
+  background-attachment: fixed;
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=fbf9f9ff&noise=8f8f8f&density=15&opacity=26");
+  &::-webkit-scrollbar {
+    display: none
+  }
 }
 
 #root {
@@ -19,101 +23,179 @@ html {
   align-items: center;
 
   main {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: rgba(251, 249, 249, 0.9);
-    // overflow-y: auto;
+    overflow: hidden;
 
     .loading {
       color: white;
       width: 100%;
       height: 100%;
-      position: relative;
+      position: ab;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       background-color: #121212;
 
-      #initial {
+      #progress-bar {
         position: absolute;
-        left: 0;
-        width: 100%;
-        background-color: grey;
-        height: 3px;
-        transition: width 0.3s ease-out;
+        background-color: rgba(255, 255, 255, 0.425);
+        height: 2px;
+        transition: width 0.6s ease-out;
+      }
+
+      h1 {
+        font-size: 95px;
+        font-family: "Saol Display Regular";
+        margin-bottom: -7px;
       }
     }
 
-    .content {
-      background-color: rgba(251, 249, 249, 0.9);
-      position: absolute;
-      left: 0;
-      height: 3px;
-      width: 0;
+    header {
+      height: 20%;
+      width: 100%;
+      position: fixed;
       display: flex;
+      // justify-content: space-evenly;
       align-items: center;
+      // opacity: 0;
+      z-index: 1;
+
+      div {
+        height: 3px;
+        background-color: #303030c0;
+        // animation: width 0.3s forwards ease-out;
+        animation-delay: 7.3s;
+      }
+
+      @keyframes width {
+        from {
+          width: 0;
+        }
+        to {
+          width: 35%;
+        }
+      }
+
+      span {
+        font-family: "Saol Display Regular";
+        font-size: 5.5vmin;
+        letter-spacing: 1.2px;
+        width: 20%;
+        color: black;
+        text-align: center;
+        // animation: show 0.8s forwards ease-out;
+        animation-delay: 7s;
+        // opacity: 0;
+
+        &:nth-of-type(2) {
+          color: brown;
+          width: 45%;
+          // animation: show 0.8s forwards ease-out;
+          // opacity: 0;
+          animation-delay: 7.6s;
+        }
+      }
+    }
+
+    input {
+      position: fixed;
+      transform: rotate(90deg);
+      right: 0%;
+      bottom: 30%;
+      -webkit-appearance: none;
+      width: 25vh;
+      height: 2px;
+      outline: none;
+      background: black;
+      transition: 0.5s;
+      z-index: 10;
+
+    }
+    input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      background: rgb(0, 0, 0);
+    }
+
+    .content {
+      background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=fbf9f9ff&noise=8f8f8f&density=15&opacity=26");
+      // position: absolute;
+      background-attachment: fixed;
+      // left: 0;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      // height: 2px;
+      // width: 0;
+      // overflow: hidden;
+
+      .buffer {
+        height: 15.5%;
+        width: 100%;
+      }
 
       section {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
         color: #303030;
+        width: 100%;
+        height: 80%;
+        // opacity: 0;
+        padding: 4%;
 
-        &:nth-of-type(1) {
-          width: 50%;
-          justify-content: space-between;
+        p {
+          font-size: 8.8vmax;
+          font-family: "raleway";
+          letter-spacing: 1px;
+          line-height: 20vmin;
+
+          small {
+            font-weight: bold;
+            font-size: 8.8vmax;
+          }
+        }
+
+        ion-icon {
+          position: absolute;
+          bottom: 93px;
+          right: 215px;
+          font-size: 30px;
           opacity: 0;
-
-          div {
-            width: 250px;
-            transform: translate(70px, 83px);
-            font-family: "Courier New", Courier, monospace;
-            color: black;
-
-            h1 {
-              font-size: 24px;
-              margin-bottom: 10px;
-              letter-spacing: 0.3px;
-            }
-            p {
-              font-size: 17px;
-            }
+          animation: show 0.2s forwards;
+          animation-delay: 7.8s;
+          &:hover {
+            cursor: pointer;
           }
+        }
 
-          span {
-            position: absolute;
-            bottom: 165px;
-            left: 164px;
-            font-family: "raleway";
-            font-size: 14.5px;
-            transition: 0.2s;
-            color: brown;
-            &:hover {
-              cursor: pointer;
-              transform: scale(1.05);
-            }
+        @keyframes show {
+          from {
+            opacity: 0;
           }
+          to {
+            opacity: 1;
+          }
+        }
 
-          ion-icon {
-            position: absolute;
-            bottom: 195px;
-            left: 190px;
-            font-size: 30px;
-            &:hover {
-              cursor: pointer;
-            }
-          }
+        svg {
+          position: absolute;
+          right: 120px;
+          bottom: 0;
 
           circle {
             fill: transparent;
             stroke: black;
-            stroke-width: 1;
-            stroke-dasharray: 1300;
-            stroke-dashoffset: 1300;
-            animation: rotate 2s linear forwards;
+            stroke-width: 1.3;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: rotate 1s linear forwards;
+            animation-delay: 0.5s;
+
             &:hover {
               cursor: pointer;
             }
@@ -125,43 +207,21 @@ html {
             }
           }
         }
-
-        &:nth-of-type(2) {
-          height: 90vh;
-          width: 490px;
-          align-items: flex-start;
-          justify-content: center;
-          padding-left: 20px;
-          opacity: 0;
-          
-          div {
-            &:nth-of-type(2) {
-              align-self: flex-end;
-            }
-
-            p {
-              line-height: 190px;
-              font-size: 250px;
-              font-family: "Saol Display Regular";
-              letter-spacing: 5px;
-              transform: translateY(22px);
-            }
-          }
-        }
       }
     }
   }
 
   // ABOUT
 
-  .about {
-    background-color: rgba(251, 249, 249, 0.9);
+  #about {
+    background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=fbf9f9ff&noise=8f8f8f&density=15&opacity=26");
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     padding: 4% 6%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-attachment: fixed;
 
     header {
       width: 45%;
@@ -189,6 +249,9 @@ html {
       width: 100%;
       height: 85%;
       display: flex;
+
+      flex-direction: column;
+
       justify-content: space-around;
       align-items: center;
 
@@ -223,94 +286,12 @@ html {
       }
     }
   }
+}
 
-  @media only screen and (max-width: 920px) {
-    // LANDING
-    main {
-      flex-direction: column;
-      align-items: flex-start;
-      min-height: 180vw;
-      section {
-        &:nth-of-type(1) {
-          height: 250px;
-          circle,
-          ion-icon,
-          span {
-            display: none;
-          }
-          div {
-            transform: translate(30px, 50px);
-          }
-        }
-        &:nth-of-type(2) {
-          padding-left: 15px;
-          justify-content: flex-start;
-          width: 100vw;
-          div {
-            p {
-              line-height: 42vw;
-              font-size: 54vw;
-            }
-          }
-        }
-      }
-    }
-
-    // ABOUT
-    .about {
-      header {
-        width: 100%;
-        h1 {
-          font-size: 29px;
-        }
-        span {
-          font-size: 19px;
-        }
-      }
-      section {
-        flex-direction: column;
-        div {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-width: 410px) {
-    // LANDING
-    main {
-      width: 410px;
-      align-items: center;
-      min-height: 110%;
-      section {
-        &:nth-of-type(1) {
-          align-self: flex-start;
-          div {
-            transform: translate(50px, 50px);
-          }
-        }
-        &:nth-of-type(2) {
-          width: 87%;
-          div {
-            p {
-              line-height: 42vw;
-              font-size: 50vw;
-            }
-          }
-        }
-      }
-    }
-
-    // ABOUT
-    .about {
-      header {
-        h1 {
-          font-size: 24px;
-        }
-        span {
-          font-size: 14px;
-        }
-      }
+@media only screen and (max-width: 550px) {
+  header {
+    h6 {
+      transform: translateY(12px) !important;
     }
   }
 }
