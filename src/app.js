@@ -31,7 +31,7 @@ const App = () => {
      <Landing showContent={() => showContent()} />
      
      {/* {display && */}
-      <About />
+      {/* <About /> */}
      {/* } */}
     </>
   )

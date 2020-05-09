@@ -6,14 +6,26 @@
 
 body,
 html {
+  // cursor: none;
   width: 100vw;
   height: 100vh;
   background-attachment: fixed;
   background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=fbf9f9ff&noise=8f8f8f&density=15&opacity=26");
   &::-webkit-scrollbar {
-    display: none
+    display: none;
   }
 }
+
+// .cursor {
+//   width: 35px;
+//   height: 35px;
+//   border: lightseagreen 3px solid;
+//   border-radius: 50%;
+//   position: absolute;
+//   // animation: pulse 0.6s alternate infinite linear;
+//   // transition: 0.4s ease-out;
+//   background: transparent;
+// }
 
 #root {
   width: 100vw;
@@ -24,21 +36,23 @@ html {
 
   main {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    //
+    flex-direction: column;
 
     .loading {
       color: white;
-      width: 100%;
-      height: 100%;
-      position: ab;
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       background-color: #121212;
+      z-index: 1;
 
       #progress-bar {
         position: absolute;
@@ -50,16 +64,16 @@ html {
       h1 {
         font-size: 95px;
         font-family: "Saol Display Regular";
+
         margin-bottom: -7px;
       }
     }
 
     header {
-      height: 20%;
+      height: 24%;
       width: 100%;
       position: fixed;
       display: flex;
-      // justify-content: space-evenly;
       align-items: center;
       // opacity: 0;
       z-index: 1;
@@ -67,7 +81,7 @@ html {
       div {
         height: 3px;
         background-color: #303030c0;
-        // animation: width 0.3s forwards ease-out;
+        animation: width 0.3s forwards ease-out;
         animation-delay: 7.3s;
       }
 
@@ -81,63 +95,40 @@ html {
       }
 
       span {
-        font-family: "Saol Display Regular";
-        font-size: 5.5vmin;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 6vmin;
         letter-spacing: 1.2px;
         width: 20%;
         color: black;
         text-align: center;
-        // animation: show 0.8s forwards ease-out;
+        animation: show 0.8s forwards ease-out;
         animation-delay: 7s;
         // opacity: 0;
 
         &:nth-of-type(2) {
           color: brown;
           width: 45%;
-          // animation: show 0.8s forwards ease-out;
-          // opacity: 0;
+          animation: show 0.8s forwards ease-out;
+          opacity: 0;
           animation-delay: 7.6s;
         }
       }
     }
 
-    input {
-      position: fixed;
-      transform: rotate(90deg);
-      right: 0%;
-      bottom: 30%;
-      -webkit-appearance: none;
-      width: 25vh;
-      height: 2px;
-      outline: none;
-      background: black;
-      transition: 0.5s;
-      z-index: 10;
-
-    }
-    input::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      cursor: pointer;
-      background: rgb(0, 0, 0);
-    }
-
     .content {
       background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=fbf9f9ff&noise=8f8f8f&density=15&opacity=26");
-      // position: absolute;
       background-attachment: fixed;
-      // left: 0;
+      position: relative;
       height: 100%;
       width: 100%;
-      position: relative;
+      // position: absolute;
+      // left: 0;
       // height: 2px;
       // width: 0;
-      // overflow: hidden;
+      z-index: 10;
 
       .buffer {
-        height: 15.5%;
+        height: 15vh;
         width: 100%;
       }
 
@@ -152,24 +143,11 @@ html {
           font-size: 8.8vmax;
           font-family: "raleway";
           letter-spacing: 1px;
-          line-height: 20vmin;
+          line-height: 24vmin;
 
           small {
             font-weight: bold;
             font-size: 8.8vmax;
-          }
-        }
-
-        ion-icon {
-          position: absolute;
-          bottom: 93px;
-          right: 215px;
-          font-size: 30px;
-          opacity: 0;
-          animation: show 0.2s forwards;
-          animation-delay: 7.8s;
-          &:hover {
-            cursor: pointer;
           }
         }
 
@@ -181,117 +159,180 @@ html {
             opacity: 1;
           }
         }
-
-        svg {
-          position: absolute;
-          right: 120px;
-          bottom: 0;
-
-          circle {
-            fill: transparent;
-            stroke: black;
-            stroke-width: 1.3;
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: rotate 1s linear forwards;
-            animation-delay: 0.5s;
-
-            &:hover {
-              cursor: pointer;
-            }
-          }
-
-          @keyframes rotate {
-            to {
-              stroke-dashoffset: 0;
-            }
-          }
-        }
       }
     }
   }
 
-  // ABOUT
+  #about-title,
+  #work-title,
+  #contact-title {
+    width: 50%;
+    height: 10%;
+    align-self: flex-end;
+    border-top: 3px solid black;
+    padding-top: 10px;
+    font-family: "Cormorant Garamond", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px 100px 180px 100px;
 
-  #about {
-    background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=fbf9f9ff&noise=8f8f8f&density=15&opacity=26");
-    width: 100vw;
-    height: 100vh;
-    padding: 4% 6%;
+    h1 {
+      font-size: 5.8vmin;
+      color: black;
+    }
+
+    span {
+      font-size: 2.9vmax;
+      color: brown;
+      font-weight: 500;
+    }
+  }
+
+  #work-title {
+    align-self: flex-start;
+  }
+
+  #para {
+    margin: 10.5vmax;
+    width: 80%;
+    font-family: raleway;
+
+    p {
+      font-size: 4vmax;
+    }
+
+    small {
+      font-size: 4vmax;
+      font-weight: bold;
+    }
+  }
+
+  #honne,
+  #kap,
+  #financier,
+  #pacman {
+    width: 83%;
+    font-family: "raleway";
+    margin: 45vh 7vw;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-attachment: fixed;
+    align-items: flex-end;
+    text-align: end;
 
-    header {
-      width: 45%;
-      height: 10%;
-      align-self: flex-end;
-      border-top: 3px solid black;
-      font-family: "Raleway";
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      h1 {
-        font-size: 35px;
-        color: black;
-      }
-
-      span {
-        font-size: 25px;
-        color: brown;
-        font-weight: 500;
-      }
+    h1 {
+      font-size: 10vmax;
+      font-family: "Poiret One", cursive;
+    }
+    h4 {
+      font-size: 4vmax;
+    }
+    p {
+      font-size: larger;
+      width: 60%;
     }
 
-    section {
-      width: 100%;
-      height: 85%;
-      display: flex;
+    video {
+      height: 550px;
+      position: absolute;
+      left: 0;
+      top: -10%;
+      opacity: 0;
+      transition: 1s;
+      filter: blur(2px);
+      transform: translateX(-50px);
+    }
+  }
 
-      flex-direction: column;
+  #financier {
+    h1 {
+      font-family: "Montserrat";
+      font-size: 8.5vmax;
+    }
+  }
 
-      justify-content: space-around;
-      align-items: center;
+  #kap,
+  #pacman {
+    align-items: flex-start;
+    text-align: start;
 
-      div {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    h1 {
+      font-family: "Montserrat";
+    }
+  }
 
-        &:nth-of-type(1) {
-          p {
-            font-size: 21px;
-            font-family: "Courier New", Courier, monospace;
-            color: black;
-            letter-spacing: -1px;
-          }
-        }
-        &:nth-of-type(2) {
-          height: 66%;
-          color: black;
-          h1 {
-            font-family: "raleway";
-            font-size: 25px;
-          }
-          li {
-            list-style: disc;
-            font-family: "Courier New", Courier, monospace;
-            transform: translate(26px, 25px);
-            font-size: 18px;
-          }
-        }
+  #pacman {
+    h1 {
+      font-family: "Press Start 2P";
+      font-size: 6.5vmax;
+    }
+  }
+
+  // CONTACT
+
+  #contact {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    a {
+      font-family: "Saol Display Regular";
+      font-size: 5vmax;
+      color: black;
+      margin: 4% 3%;
+      transition: 0.5s;
+      background: linear-gradient(brown, brown) left no-repeat black;
+      background-size: 0% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:hover {
+        background-size: 100% 100%;
       }
     }
+  }
+  
+
+}
+
+@media only screen and (max-width: 900px) {
+  #about-title,
+  #work-title, #contact-title {
+    width: 80% !important;
+    align-self: center !important;
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 500px) {
   header {
-    h6 {
-      transform: translateY(12px) !important;
+    height: 20% !important;
+    span {
+      font-size: 23px !important;
     }
   }
+
+  .content {
+    .buffer {
+      height: 20vh !important;
+    }
+  }
+
+  #para {
+    width: 85% !important;
+    p,
+    small {
+      font-size: 3.2vmax !important;
+    }
+  }
+
+  #honne,
+  #kap,
+  #financier,
+  #pacman {
+    p {
+      width: 100% !important;
+    }
+  }
+
 }
