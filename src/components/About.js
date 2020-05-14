@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import Rellax from 'rellax'
 
+// import * as ScrollMagic from 'scrollmagic'
+// import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
+
 const About = () => {
 
   useEffect(() => {
@@ -10,43 +13,41 @@ const About = () => {
   return (
     <>
 
-      <div id="about" className='rellax' data-rellax-speed='-5'>
-        <header>
-          <span> No. 1</span>
-          <h1> WHO'S TALKING ?</h1>
-        </header>
-
-        <section >
-          <div>
-            <p>
-              I'm Kenn, a Junior Full-stack Developer.
-              I create projects under the notion that less is more, and my work
-              reflects my enthusiasm for minimal and clean design.
-              Beyond cultivating my ability to write good code
-              and my perception in UI design, my aim is to take coding
-              into the professional dimension, where I hope to bring value and grow myself.
-            </p>
-          </div>
-       
-{/* 
-          <div>
-            <h1> My work implements: </h1>
-            <ul>
-              <li> HTML, CSS(SASS), JSX </li>
-              <li> JavaScript </li>
-              <li> React </li>
-              <li> MERN & Django(DRF) Stack </li>
-              <li> PostgreSQL & MongoDB </li>
-              <li> Git & GitHub </li>
-            </ul>
-          </div> */}
-
-        </section>
-
+      <div id='para' >
+        <h1> - Hello, I'm Kenn.</h1>
+        <p> I'm a minimal and clean design addict with a front-end focus.  </p>
       </div>
 
-    </>
+      <div id='para'>
+        <p>
+          I'm also Junior <small> full-stack</small> Developer.
+        </p>
+      </div>
 
+
+      <div id='para'>
+        <p >
+          I create projects under the notion that <small> "less is more"</small>, and my work
+          reflects my enthusiasm for minimal and clean design.
+        </p>
+      </div>
+
+
+      <div id='para' >
+        <p >
+          Beyond cultivating my ability to write <small> good code</small> and
+          my perception in <small> UI design</small>, my aim is to take coding
+          into the professional dimension.
+        </p>
+      </div>
+
+
+      <div id='para' >
+        <p>
+          I strive to bring <small> value</small> and <small> grow</small> myself.  Take a look at my skills and recent work.
+        </p>
+      </div>
+    </>
   )
 }
 

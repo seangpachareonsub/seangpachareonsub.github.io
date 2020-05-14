@@ -5,6 +5,7 @@ import './styles/style.scss'
 
 import Landing from './components/Landing'
 import About from './components/About'
+import Projects from './components/Projects'
 
 
 import Rellax from 'rellax'
@@ -27,13 +28,12 @@ const App = () => {
   }
 
   return (
-    <>
-     <Landing showContent={() => showContent()} />
-     
-     {/* {display && */}
-      {/* <About /> */}
-     {/* } */}
-    </>
+    <div>
+      <Landing showContent={() => showContent()} />
+      <About />
+      <Projects />
+    </div>
+
   )
 }
 

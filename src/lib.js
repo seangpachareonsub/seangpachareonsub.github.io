@@ -3,7 +3,7 @@ function main() {
 
   document.addEventListener('mousemove', e => {
     // 18 Y AND 17X
-    cursor.setAttribute('style', 'top: ' + (e.pageY - 100) + 'px; left: ' + (e.pageX - 100) + 'px')
+    cursor.setAttribute('style', 'top: ' + (e.pageY - 300) + 'px; left: ' + (e.pageX - 600) + 'px')
   })
 }
 
