@@ -14,7 +14,7 @@ const About = () => {
     <>
 
       <div id='para' >
-        <h1> <small> (001) </small>Hello, I'm Kenn.</h1>
+        <h1 className='section-title' > <small> (001) </small>Hello, I'm Kenn.</h1>
         <p> I'm a minimal and clean design addict with a front-end focus.  </p>
       </div>
 
@@ -27,8 +27,8 @@ const About = () => {
 
       <div id='para'>
         <p >
-          I create projects under the notion that <small> "less is more"</small>, and my work
-          reflects my enthusiasm for minimal and clean design.
+          I create projects under the notion that <small> "less is more"</small> and my work
+          reflects my desire to learn and push boundaries.
         </p>
       </div>
 
@@ -44,7 +44,8 @@ const About = () => {
 
       <div id='para' >
         <p>
-          I strive to bring <small> value</small> and <small> grow</small> myself.  Take a look at my skills and recent work.
+          I strive to bring <small> value</small> and <small> continously grow</small> myself.  
+          Browse through what I've done recently.
         </p>
       </div>
     </>

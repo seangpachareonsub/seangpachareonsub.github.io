@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { TimelineLite, Expo } from 'gsap'
 import Typist from 'react-typist'
-import hoverEffect from 'hover-effect'
+
+import { LiquidDistortionText } from 'react-text-fun'
 
 import Rellax from 'rellax'
 
@@ -10,6 +11,7 @@ import main from '../lib'
 const Landing = () => {
 
   const [counter, setCounter] = useState(0)
+  const [nav, setNav] = useState(['WHO\'S TALKING?', 'STUFF I\'VE DONE', 'STALK ME'])
 
   useEffect(() => {
     main()
@@ -65,15 +67,21 @@ const Landing = () => {
   }
 
   const scroll = (e) => {
-    const options = document.querySelectorAll('h3')
+    const section = document.querySelectorAll('.section-title')
 
-    switch (e.target) {
-      case options[1]:
-        window.scrollTo(0, 900)
+    switch (e.target.innerHTML) {
+      case '- WHO\'S TALKING?':
+        section[0].scrollIntoView({
+          block: 'center'
+        })
         break
-      case options[2]:
-        window.scrollTo(0, 3400)
+      case '- STUFF I\'VE DONE':
+        section[1].scrollIntoView({
+          block: 'center'
+        })
     }
+
+    console.log(e.target.innerHTML)
 
 
   }
@@ -85,7 +93,7 @@ const Landing = () => {
       {/* <div className='loading'>
 
         <div className="quote">
-          <h1> 12/05 </h1>
+          <h1> Define Thoughts </h1>
           <p>
             <Typist avgTypingDelay={55} stdTypingDelay={45} cursor={cursor}>
               <Typist.Delay ms={1500} />
@@ -108,36 +116,44 @@ const Landing = () => {
       </div> */}
 
 
-      <div className='content' >
+      <div className='content'>
 
         <div id='scroll'></div>
 
-
-        {/* <p className='title-lines'> Hi, I'm Kenn. </p>
-          <p className='title-lines'> A <span> minimal </span> and  </p>
-          <p className='title-lines'> <span> clean </span> design addict,   </p>
-          <p className='title-lines'> with a </p>
-          <p className='title-lines'> <span> front-end </span> focus. </p> */}
-
         <section>
-          <h1> FOLIO '20 </h1>
-          <h2> VER. 009 </h2>
+          <p> VISUALIZE </p>
+          <p> DRAFT 009 OF </p>
+          <p> FOLIO '20. </p>
+          <p> EST. 12/05 </p>
         </section>
 
-        <section>
-          <h3 > CONTAINS </h3>
-          <h3 
-            onClick={(e) => scroll(e)}> WHO'S TALKING?</h3>
-          <h3 
-            onClick={(e) => scroll(e)}>  STUFF I'VE DONE </h3>
-          <h3
-            onClick={(e) => scroll(e)}> STALK ME </h3>
-        </section>
+        <nav>
+          <ul>
+
+            {nav.map((nav, i) => {
+              return (
+                <li key={i} onClick={(e) => scroll(e)} >
+                  <LiquidDistortionText
+                    text={'-' + ' ' + nav}
+                    fontSize={20}
+                    speed={0.3}
+                    volatility={0.023}
+                    fill='pink'
+                    fontFamily='raleway'
+                    fontWeight={500}
+                    paddingRight={5}
+                  />
+                </li>
+              )
+            })}
+
+            {/* <li onClick={(e) => scroll(e)}> WHOS'S TALKING? </li>
+            <li onClick={(e) => scroll(e)}> STUFF I'VE DONE </li>
+            <li onClick={(e) => scroll(e)}> STALK ME </li> */}
+          </ul>
+        </nav>
 
       </div>
-
-
-
 
     </main >
 

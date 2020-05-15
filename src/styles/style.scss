@@ -127,143 +127,81 @@ html {
       left: 0;
       top: 0;
       background-color: #121212;
-      font-family: raleway;
+      font-family: 'Cormorant Garamond';
+      // font-family: 'saol display';
+      font-weight: 300;
 
       #scroll {
-        height: 2px;
-        width: 90px;
-        transform: rotate(90deg);
-        background-color: white;
         position: absolute;
+        right: 2%;
         bottom: 10%;
-        right: 1.5%;
+        display: block;
+        height: 1px;
+        width: 90px;
+        background-color: white;
+        transform: rotate(90deg);
+        font-weight: bold;
         &::before {
-          content: "SCROLL";
-          display: block;
-          position: absolute;
-          left: -90%;
-          transform: translateY(-10px);
+          content: 'CONCEPTUALIZE';
+          display: block;;
+          font-family: 'raleway';
           color: white;
-          display: flex;
-          justify-content: center;
-          font-weight: 500;
+          position: absolute;
+          left: -150px;
+          top: -10px
+        }
+        &::after {
+          content: '';
+          display: block;
+          background-color: white;
+          position: absolute;
+          right: -1.3px;
+          top: -6px;
+          height: 1px;
+          width: 23px;
+          transform: rotate(30deg);
+        }
+      }
+
+      nav {
+        position:fixed;
+        top: 7%;
+        left: 2%;
+        z-index: 5;
+        width: 35%;
+        ul {
+          canvas {
+            display: block;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          li {
+            list-style: none;
+          }
         }
       }
 
       section {
-        &:nth-of-type(1) {
-          height: 20%;
-          padding-top: 3vh;
-          width: 95%;
-          h1 {
-            color: white;
-            text-align: end;
-            font-size: 7vmax;
-            margin-bottom: -4.5vw;
-            font-weight: lighter;
-          }
-          h2 {
-            color: white;
-            text-align: end;
-            font-size: 4vmax;
-            margin-bottom: -7vw;
-            font-weight: lighter;
-          }
-        }
-        &:nth-of-type(2) {
-          height: 75%;
+          height: 82.5%;
           position: relative;
-          overflow: hidden;
-          h3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          p {
             color: white;
-            font-size: 8.3vw;
-            margin-bottom: -11.1vw;
-            padding-left: 5%;
+            font-size: 13.3vw;
+            margin-bottom: -9vw;
+            padding: 0% 5%;
             letter-spacing: 2px;
-            position: relative;
-
             &:nth-of-type(1) {
-              background-color: white;
-              color: black;
-              width: 55%;
-              font-size: 7vw;
+              text-align: end;
             }
-
-            &:nth-of-type(2),
-            &:nth-of-type(3),
-            &:nth-of-type(4) {
-              z-index: 5;
-              border-top: 1px solid rgba(128, 128, 128, 0.63);
-              padding-top: 1%;
-              &:hover {
-                color: pink;
-                text-decoration: line-through;
-                font-style: italic;
-                padding-left: 7%;
-                cursor: pointer;
-                transition: 0.3s;
-              }
-            }
-
-            &:nth-of-type(2),
-            &:nth-of-type(4) {
-              padding-left: 12%;
-              &:hover {
-                padding-left: 15%;
-              }
-            }
-
-            &:nth-of-type(4) {
-              border-bottom: 1px solid grey;
-              padding-bottom: 2%;
-            }
-          }
+            &:nth-of-type(3) {
+              padding-left: 12.5%;
+            }  
         }
       }
-
-      // p {
-      //   font-family: 'raleway';
-      //   font-size: 5.7vw;
-      //   line-height: 0vh;
-      //   font-weight: 400;
-      //   margin: 7vw 0;
-      // }
-
-      // div {
-      //   height: 100vh;
-      //   display: flex;
-      //   justify-content: center;
-      //   flex-direction: column;
-      //   overflow: hidden;
-      //   p {
-      //     font-family: 'raleway';
-      //     color: white;
-      //     font-size: 10vw;
-      //     line-height: 0vh;
-      //     font-weight: 400;
-      //     opacity: 0;
-      //     margin: 4.2vw 0;
-      //     span {
-      //       color: peachpuff;
-      //     }
-
-      //     &:nth-of-type(1) {
-      //       transform: translateX(8%);
-      //     }
-      //     &:nth-of-type(2) {
-      //       transform: translateX(12%);
-      //     }
-      //     &:nth-of-type(3) {
-      //       transform: translateX(3%);
-      //     }
-      //     &:nth-of-type(4) {
-      //       transform: translateX(13%);
-      //     }
-      //     &:nth-of-type(5) {
-      //       transform: translateX(9%);
-      //     }
-      //   }
-      // }
     }
   }
 
@@ -300,7 +238,8 @@ html {
 
   .honne-container,
   .fin-container,
-  .pac-container {
+  .pac-container, 
+  .kap-container {
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
@@ -314,11 +253,22 @@ html {
 
     #proj-text {
       width: 30%;
-      text-align: center;
       p {
         text-align: justify;
         color: white;
-        font-size: 18px;
+      }
+      small {
+        font-size: 17.5px;
+        color: pink;
+      }
+      ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        li {
+          color: white;
+          list-style: initial;
+        }
       }
     }
 
@@ -326,6 +276,7 @@ html {
       width: 280px;
       height: 630px;
       position: relative;
+      
       &:hover {
         cursor: pointer;
       }
@@ -340,9 +291,10 @@ html {
       canvas {
         border-radius: 30px;
         filter: brightness(85%);
+        box-shadow: 1.2px 1.2px 4px rgb(56, 56, 56);
       }
       &::after {
-        content: "PROJ WRK 001";
+        content: "PRJ WRK 001";
         display: block;
         transform: rotate(-90deg);
         color: rgb(235, 232, 232);
@@ -359,7 +311,8 @@ html {
     }
   }
 
-  .fin-container {
+
+  .fin-container, .kap-container {
     flex-direction: column;
     align-items: flex-end;
     padding-right: 5%;
@@ -373,7 +326,8 @@ html {
         font-family: "Montserrat";
       }
     }
-    #fin-image {
+
+    #fin-image, #kap-image {
       width: 63vw;
       height: 33vw;
       position: relative;
@@ -385,12 +339,37 @@ html {
         color: rgb(235, 232, 232);
       }
       &::after {
-        content: "PROJ WRK 003";
+        content: "PRJ WRK 003";
         display: block;
         color: rgb(235, 232, 232);
         position: absolute;
         left: 1%;
         top: -32px;
+      }
+    }
+    #fin-image {
+      box-shadow: 0.5px 0.5px 4px rgb(7, 7, 7);
+    }
+  }
+
+  .kap-container {
+    align-items: flex-start;
+    padding-left: 5%;
+    #proj-text {
+      h1 {
+        margin-left: -2%;
+      }
+      width: 45%;
+      align-self:flex-end;
+      transform: translateX(-25%);
+      p {
+        width: 100%;
+      }
+    }
+    #kap-image {
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
+      &::after {
+        content: "PRJ WRK 002";
       }
     }
   }
@@ -403,6 +382,7 @@ html {
       position: relative;
       margin-bottom: 5vw;
       transform: translateY(20px);
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
       p {
         position: absolute;
         bottom: -30px;
@@ -410,7 +390,7 @@ html {
         color: rgb(235, 232, 232);
       }
       &::after {
-        content: "PROJ WRK 004";
+        content: "PRJ WRK 004";
         display: block;
         color: rgb(235, 232, 232);
         position: absolute;
@@ -437,28 +417,24 @@ html {
   .quote {
     width: 82% !important;
   }
-  section {
-    &:nth-of-type(1) {
-      height: 35% !important;
+  .content {
+    nav {
+      width: 100% !important;
     }
-    &:nth-of-type(2) {
-      height: 65% !important;
-      h3 {
-        padding-top: 3% !important;
-        font-size: 9.5vw !important;
-        &:nth-of-type(1) {
-          font-size: 8vw !important;
-          padding: 3% !important;
-        }
+    section {
+      height: 93% !important;
+      p {
+        margin-bottom: -7vw !important;
+        font-size: 13vw !important;
       }
     }
   }
   .honne-container,
   .fin-container,
-  .pac-container {
+  .pac-container, .kap-container {
     flex-direction: column;
     align-items: center !important;
-    padding-right: 0% !important;
+    padding: 0% !important;
     #proj-text {
       width: 80% !important;
       margin-top: 10vw;
@@ -468,17 +444,19 @@ html {
       }
     }
 
+      #honne-image {
+        width: 250px !important;
+        height: 570px !important
+      }
+  
+   
 
-    #honne-image {
-      width: 250px !important;
-      height: 570px !important
-    }
-
-    #fin-image {
+    #fin-image, #kap-image {
       width: 85vw !important;
       height: 45vw !important;
     }
 
+    
 
     img {
       display: block !important;
@@ -494,6 +472,17 @@ html {
     }
 
    
+  }
+
+  .honne-container {
+    flex-direction: column-reverse;
+  }
+
+  .kap-container {
+    #proj-text {
+      transform: translate(0) !important;
+      align-self: center !important;
+    }
   }
 
   .pac-container {
