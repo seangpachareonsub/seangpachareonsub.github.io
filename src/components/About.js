@@ -14,7 +14,7 @@ const About = () => {
     <>
 
       <div id='para' >
-        <h1> - Hello, I'm Kenn.</h1>
+        <h1> <small> (001) </small>Hello, I'm Kenn.</h1>
         <p> I'm a minimal and clean design addict with a front-end focus.  </p>
       </div>
 

@@ -128,9 +128,6 @@ html {
       top: 0;
       background-color: #121212;
       font-family: raleway;
-     
-
-     
 
       #scroll {
         height: 2px;
@@ -141,7 +138,7 @@ html {
         bottom: 10%;
         right: 1.5%;
         &::before {
-          content: 'SCROLL';
+          content: "SCROLL";
           display: block;
           position: absolute;
           left: -90%;
@@ -184,7 +181,6 @@ html {
             padding-left: 5%;
             letter-spacing: 2px;
             position: relative;
-           
 
             &:nth-of-type(1) {
               background-color: white;
@@ -192,8 +188,6 @@ html {
               width: 55%;
               font-size: 7vw;
             }
-
-           
 
             &:nth-of-type(2),
             &:nth-of-type(3),
@@ -209,15 +203,13 @@ html {
                 cursor: pointer;
                 transition: 0.3s;
               }
-              
             }
-          
+
             &:nth-of-type(2),
             &:nth-of-type(4) {
               padding-left: 12%;
               &:hover {
                 padding-left: 15%;
-
               }
             }
 
@@ -275,25 +267,26 @@ html {
     }
   }
 
-
-
   #para {
     background-color: #121212;
     color: white;
-    margin: 10vw 0 ;
+    margin: 10vw 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    // z-index: 7;
-    // position: relative;
-    // opacity: 0;
+    // font-family: 'raleway';
 
     h1 {
-      font-size: 10vw;
+      font-size: 9.7vw;
       width: 80%;
-      // background-color: white;
+      // font-family: "saol display";
+      font-family: 'raleway';
       color: pink;
+      font-weight: bolder;
+      small {
+        font-size: 4vw;
+      }
     }
 
     p {
@@ -301,61 +294,141 @@ html {
       font-size: 5vw;
       small {
         font-size: 5vw;
-        // background-color: white;
-        // color: pink;
-        // color: pink;
       }
     }
   }
 
-  .proj-container {
+  .honne-container,
+  .fin-container,
+  .pac-container {
     width: 100vw;
-    margin: 20vw 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin: 15vw 0;
+    font-family: "raleway";
 
-
-    .proj-image {
-      width: 290px;
-      height: 650px;
+    img {
+      display: none;
       position: relative;
+    }
+
+    #proj-text {
+      width: 30%;
+      text-align: center;
+      p {
+        text-align: justify;
+        color: white;
+        font-size: 18px;
+      }
+    }
+
+    #honne-image {
+      width: 280px;
+      height: 630px;
+      position: relative;
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        position: absolute;
+        bottom: -35px;
+        right: 15px;
+        color: rgb(235, 232, 232);
+      }
+
       canvas {
         border-radius: 30px;
-        filter: brightness(90%);
+        filter: brightness(85%);
       }
       &::after {
-        content: 'PROJ WRK 1';
+        content: "PROJ WRK 001";
         display: block;
-        transform: rotate(90deg);
-        color: white;
+        transform: rotate(-90deg);
+        color: rgb(235, 232, 232);
         position: absolute;
-        right: -23%;
+        left: -27.5%;
         bottom: 10%;
       }
     }
-
     h1 {
-      position: absolute;
-      bottom: -150px;
       z-index: 1;
-      left: -200px;
-      font-size: 100px;
-      font-family: 'poiret one';
+      font-size: 8.9vmax;
+      font-family: "poiret one";
       color: white;
     }
   }
-}
 
-@media only screen and(max-width: 1100px) {
-  .quote {
-    width: 60% !important;
-  }
-  section {
-    &:nth-of-type(1) {
-      height: 35% !important;
+  .fin-container {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5%;
+    #proj-text {
+      width: 80%;
+      text-align: start;
+      p {
+        width: 60%;
+      }
+      h1 {
+        font-family: "Montserrat";
+      }
     }
-    &:nth-of-type(2) {
-      height: 65% !important;
+    #fin-image {
+      width: 63vw;
+      height: 33vw;
+      position: relative;
+      margin-bottom: 5vw;
+      p {
+        position: absolute;
+        bottom: -30px;
+        right: 10px;
+        color: rgb(235, 232, 232);
+      }
+      &::after {
+        content: "PROJ WRK 003";
+        display: block;
+        color: rgb(235, 232, 232);
+        position: absolute;
+        left: 1%;
+        top: -32px;
+      }
+    }
+  }
+
+  .pac-container {
+    // flex-direction:  column;
+    #pac-image {
+      width: 35vw;
+      height: 40vw;
+      position: relative;
+      margin-bottom: 5vw;
+      transform: translateY(20px);
+      p {
+        position: absolute;
+        bottom: -30px;
+        left: 5px;
+        color: rgb(235, 232, 232);
+      }
+      &::after {
+        content: "PROJ WRK 004";
+        display: block;
+        color: rgb(235, 232, 232);
+        position: absolute;
+        right: -70px;
+        bottom: 55px;
+        transform: rotate(90deg);
+      }
+    }
+
+    #proj-text {
+      width: 50%;
+      // background-color: pink;
+    }
+
+    h1 {
+      font-size: 6.5vmax;
+      color: rgb(226, 226, 226);
+      font-family: "Press Start 2P", cursive;
     }
   }
 }
@@ -371,13 +444,63 @@ html {
     &:nth-of-type(2) {
       height: 65% !important;
       h3 {
-        padding-top: 3% !important; 
+        padding-top: 3% !important;
         font-size: 9.5vw !important;
         &:nth-of-type(1) {
           font-size: 8vw !important;
           padding: 3% !important;
         }
       }
+    }
+  }
+  .honne-container,
+  .fin-container,
+  .pac-container {
+    flex-direction: column;
+    align-items: center !important;
+    padding-right: 0% !important;
+    #proj-text {
+      width: 80% !important;
+      margin-top: 10vw;
+      h1 {
+        text-align: center;
+        font-size: 12vw !important;
+      }
+    }
+
+
+    #honne-image {
+      width: 250px !important;
+      height: 570px !important
+    }
+
+    #fin-image {
+      width: 85vw !important;
+      height: 45vw !important;
+    }
+
+
+    img {
+      display: block !important;
+      width: 86vw;
+      height: 45vw;
+      margin-top: 15px;
+     
+    }
+
+    #pac-image {
+      width: 80vw !important;
+      height: 93vw !important;
+    }
+
+   
+  }
+
+  .pac-container {
+    #proj-text
+    h1 {
+      text-align: center;
+      font-size: 9vw !important;
     }
   }
 }

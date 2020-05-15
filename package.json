@@ -35,12 +35,14 @@
     "react-dom": "^16.7.0",
     "react-easy-panzoom": "^0.4.4",
     "react-router-dom": "^5.1.2",
+    "react-slick": "^0.26.1",
     "react-text-fun": "^1.0.0",
     "react-typist": "^2.0.5",
     "rellax": "^1.12.1",
     "scroll-out": "^2.2.8",
     "scrollmagic": "^2.0.7",
     "scrollmagic-plugin-gsap": "^1.0.4",
+    "slick-carousel": "^1.8.1",
     "url-loader": "^4.1.0"
   }
 }
