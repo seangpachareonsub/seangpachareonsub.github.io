@@ -79,10 +79,13 @@ const Landing = () => {
         section[1].scrollIntoView({
           block: 'center'
         })
+        break
+      case '- STALK ME':
+        section[2].scrollIntoView({
+          block: 'center'
+        })
+        break
     }
-
-    console.log(e.target.innerHTML)
-
 
   }
 

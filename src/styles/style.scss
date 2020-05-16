@@ -127,7 +127,7 @@ html {
       left: 0;
       top: 0;
       background-color: #121212;
-      font-family: 'Cormorant Garamond';
+      font-family: "Cormorant Garamond";
       // font-family: 'saol display';
       font-weight: 300;
 
@@ -142,16 +142,16 @@ html {
         transform: rotate(90deg);
         font-weight: bold;
         &::before {
-          content: 'CONCEPTUALIZE';
-          display: block;;
-          font-family: 'raleway';
+          content: "CONCEPTUALIZE";
+          display: block;
+          font-family: "raleway";
           color: white;
           position: absolute;
           left: -150px;
-          top: -10px
+          top: -10px;
         }
         &::after {
-          content: '';
+          content: "";
           display: block;
           background-color: white;
           position: absolute;
@@ -164,7 +164,7 @@ html {
       }
 
       nav {
-        position:fixed;
+        position: fixed;
         top: 7%;
         left: 2%;
         z-index: 5;
@@ -183,23 +183,23 @@ html {
       }
 
       section {
-          height: 82.5%;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          p {
-            color: white;
-            font-size: 13.3vw;
-            margin-bottom: -9vw;
-            padding: 0% 5%;
-            letter-spacing: 2px;
-            &:nth-of-type(1) {
-              text-align: end;
-            }
-            &:nth-of-type(3) {
-              padding-left: 12.5%;
-            }  
+        height: 82.5%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          color: white;
+          font-size: 13.3vw;
+          margin-bottom: -9vw;
+          padding: 0% 5%;
+          letter-spacing: 2px;
+          &:nth-of-type(1) {
+            text-align: end;
+          }
+          &:nth-of-type(3) {
+            padding-left: 12.5%;
+          }
         }
       }
     }
@@ -219,7 +219,7 @@ html {
       font-size: 9.7vw;
       width: 80%;
       // font-family: "saol display";
-      font-family: 'raleway';
+      font-family: "raleway";
       color: pink;
       font-weight: bolder;
       small {
@@ -238,7 +238,7 @@ html {
 
   .honne-container,
   .fin-container,
-  .pac-container, 
+  .pac-container,
   .kap-container {
     width: 100vw;
     display: flex;
@@ -276,7 +276,7 @@ html {
       width: 280px;
       height: 630px;
       position: relative;
-      
+
       &:hover {
         cursor: pointer;
       }
@@ -311,23 +311,29 @@ html {
     }
   }
 
-
-  .fin-container, .kap-container {
+  .fin-container,
+  .kap-container {
     flex-direction: column;
     align-items: flex-end;
     padding-right: 5%;
     #proj-text {
       width: 80%;
       text-align: start;
+      transform: translateX(-8%);
       p {
-        width: 60%;
+        width: 52%;
       }
       h1 {
+        margin-left: -1%;
         font-family: "Montserrat";
+      }
+      ul {
+        width: 38%;
       }
     }
 
-    #fin-image, #kap-image {
+    #fin-image,
+    #kap-image {
       width: 63vw;
       height: 33vw;
       position: relative;
@@ -360,10 +366,13 @@ html {
         margin-left: -2%;
       }
       width: 45%;
-      align-self:flex-end;
+      align-self: flex-end;
       transform: translateX(-25%);
       p {
         width: 100%;
+      }
+      ul {
+        width: 70%;
       }
     }
     #kap-image {
@@ -375,13 +384,13 @@ html {
   }
 
   .pac-container {
-    // flex-direction:  column;
+    justify-content: space-around;
+    padding-left: 5%;
     #pac-image {
       width: 35vw;
       height: 40vw;
       position: relative;
       margin-bottom: 5vw;
-      transform: translateY(20px);
       box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
       p {
         position: absolute;
@@ -399,27 +408,120 @@ html {
         transform: rotate(90deg);
       }
     }
-
     #proj-text {
       width: 50%;
-      // background-color: pink;
+      h1 {
+        font-size: 6.3vmax;
+        color: rgb(238, 238, 238);
+        font-family: "Press Start 2P", cursive;
+      }
+      p {
+        width: 80%;
+      }
+      ul {
+        columns: 1;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -6vw 0 5vw 0;
+    font-family: "raleway";
+    div {
+      background: transparent;
+      width: 85%;
+
+      p {
+        color: white;
+        font-size: 6vw;
+        line-height: 7.5vw;
+        &:nth-of-type(1) {
+          padding-left: 22%;
+        }
+      }
+
+      input {
+        width: 35%;
+        background: transparent;
+        user-select: none;
+        outline: none;
+        border: none;
+        border-bottom: 1px grey solid;
+        font-size: 3vw;
+        color: lightsalmon;
+        font-family: "raleway";
+
+        &:focus {
+          border-bottom: 1px lightsalmon solid;
+        }
+        &:valid {
+          border: none;
+        }
+      }
     }
 
-    h1 {
-      font-size: 6.5vmax;
-      color: rgb(226, 226, 226);
-      font-family: "Press Start 2P", cursive;
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      #socials {
+        width: 30%;
+        display: flex;
+        height: 80%;
+        justify-content: space-between;
+        div {
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          a {
+            font-size: 2.2vmax;
+            color: pink;
+            &:hover {
+              text-decoration: line-through;
+              font-style: italic;
+            }
+          }
+        }
+        h1 {
+          font-size: 2.6vmax;
+          color: white;
+        }
+       
+      }
+      button {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: lightsalmon;
+        border: none;
+        color: white;
+        font-size: 22px;
+        font-family: "raleway";
+        font-weight: bold;
+        transition: 0.2s;
+        user-select: none;
+        outline: none;
+        &:hover {
+          transform: scale(0.92);
+          cursor: pointer;
+        }
+      }
     }
   }
 }
 
-@media only screen and(max-width: 600px) {
+@media only screen and(max-width: 800px) {
   .quote {
     width: 82% !important;
   }
   .content {
     nav {
       width: 100% !important;
+      left: -1% !important;
     }
     section {
       height: 93% !important;
@@ -431,47 +533,51 @@ html {
   }
   .honne-container,
   .fin-container,
-  .pac-container, .kap-container {
+  .pac-container,
+  .kap-container {
     flex-direction: column;
     align-items: center !important;
     padding: 0% !important;
+
     #proj-text {
       width: 80% !important;
-      margin-top: 10vw;
+      margin: 8vw 0 15vw 0;
+      transform: translate(0) !important;
       h1 {
+        margin: 0 0 3vw 0 !important;
         text-align: center;
         font-size: 12vw !important;
       }
+      ul {
+        width: 100% !important;
+      }
+      p {
+        width: 100% !important;
+      }
     }
 
-      #honne-image {
-        width: 250px !important;
-        height: 570px !important
-      }
-  
-   
+    #honne-image {
+      width: 250px !important;
+      height: 570px !important;
+    }
 
-    #fin-image, #kap-image {
+    #fin-image,
+    #kap-image {
       width: 85vw !important;
       height: 45vw !important;
     }
-
-    
 
     img {
       display: block !important;
       width: 86vw;
       height: 45vw;
       margin-top: 15px;
-     
     }
 
     #pac-image {
       width: 80vw !important;
       height: 93vw !important;
     }
-
-   
   }
 
   .honne-container {
@@ -486,10 +592,32 @@ html {
   }
 
   .pac-container {
-    #proj-text
-    h1 {
+    #proj-text h1 {
       text-align: center;
-      font-size: 9vw !important;
+      font-size: 8.5vw !important;
+    }
+  }
+
+  .contact {
+    padding-left: 3.5%;
+    p {
+      line-height: 8.3vw !important;
+      &:nth-of-type(1) {
+        padding-left: 0 !important;
+      }
+    }
+    input {
+      width: 90% !important;
+      font-size: 4.5vw !important;
+    }
+    button {
+      width: 130px !important;
+      height: 130px !important;
+      font-size: 17px !important;
+    }
+
+    #socials {
+      flex-direction: column !important;
     }
   }
 }

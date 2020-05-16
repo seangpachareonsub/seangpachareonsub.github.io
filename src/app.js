@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import 'bulma'
 import './styles/style.scss'
@@ -6,20 +6,11 @@ import './styles/style.scss'
 import Landing from './components/Landing'
 import About from './components/About'
 import Projects from './components/Projects'
-
-
-import Rellax from 'rellax'
-import { TimelineLite, Expo } from 'gsap'
-import baffle from 'baffle'
-
-
-
+import Contact from './components/Contact'
 
 
 
 const App = () => {
-
-
 
   const [display, setDisplay] = useState(false)
 
@@ -32,12 +23,11 @@ const App = () => {
       <Landing showContent={() => showContent()} />
       <About />
       <Projects />
+      <Contact />
     </div>
 
   )
 }
-
-
 
 ReactDOM.render(
   <App />,

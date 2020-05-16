@@ -78,7 +78,7 @@ const Projects = () => {
           <small> TECH FEATURED </small>
           <ul>
             <li> React.js </li>
-            <li> JavaScript </li>
+            <li> JavaScript (ES6)</li>
             <li> Django Rest Framework </li>
             <li> Python </li>
             <li> PostgreSQL</li>
@@ -113,7 +113,7 @@ const Projects = () => {
           <small> TECH FEATURED </small>
           <ul>
             <li> React.js </li>
-            <li> JavaScript </li>
+            <li> JavaScript (ES6) </li>
             <li> MongoDB </li>
             <li> Mongoose </li>
             <li> Node.js </li>
@@ -134,6 +134,25 @@ const Projects = () => {
         <img src="https://i.imgur.com/8jmRsRA.png" alt=""/>
         <div id='proj-text'>
           <h1> Financier </h1>
+          <p> <small> PRJ CONCPT </small> <br/>
+          A paired production of a React front-end application consuming a public API. 
+          Financier aims to bridge together the most relevant global news and updated 
+          CryptoCurrency market prices.
+            <br /> <br />
+          The application's interface allows users to browse as well as search for specific
+          news articles and is equipped with a user interactive CryptoCurrency price chart.
+          </p>
+          <br />
+          <small> TECH FEATURED </small>
+          <ul>
+            <li> React.js </li>
+            <li> JavaScript (ES6) </li>
+            <li> HTML5/SASS </li>  
+            <li> Moment.js</li>
+            <li> Axios </li>
+            <li> New York Times API </li>
+            <li> CoinGecko API </li>
+          </ul>
         </div>
       </div >
 
@@ -143,6 +162,18 @@ const Projects = () => {
         </div>
         <div id='proj-text'>
           <h1> Pac-Man</h1>
+          <p> <small> PRJ CONCPT </small> <br/>
+          An individual recreation of the popular grid based game, Pac-Man. The game consists of 
+          two different maps that mimics and aims to keep the authenticity of
+          the original game. Players play against the clock and points are recorded 
+          on a score leader board on game end.
+          </p>
+          <br />
+          <small> TECH FEATURED </small>
+          <ul>
+            <li> JavaScript (ES6) </li>
+            <li> HTML5/CSS </li>   
+          </ul>
         </div>
       </div >
 
