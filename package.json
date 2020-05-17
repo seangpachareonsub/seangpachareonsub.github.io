@@ -3,7 +3,7 @@
   "name": "basic-react-webpack-setup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --mode=development",
