@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { TimelineLite, Expo } from 'gsap'
 import Typist from 'react-typist'
-
 import { LiquidDistortionText } from 'react-text-fun'
-
 import Rellax from 'rellax'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import main from '../lib'
 
 const Landing = () => {
@@ -15,6 +14,7 @@ const Landing = () => {
 
   useEffect(() => {
     main()
+    AOS.init()
     const rellax = new Rellax('.rellax')
   }, [])
 
@@ -124,10 +124,13 @@ const Landing = () => {
         <div id='scroll'></div>
 
         <section>
-          <p> VISUALIZE </p>
-          <p> DRAFT 009 OF </p>
-          <p> FOLIO '20. </p>
-          <p> EST. 12/05 </p>
+          <p className='rellax' data-rellax-speed='1.2'> VISUALIZE </p>
+
+          <p className='rellax' data-rellax-speed='0.4'> DRAFT 009 OF </p>
+
+          <p className='rellax' data-rellax-speed='-0.4'> FOLIO '20&copy; </p>
+
+          <p className='rellax' data-rellax-speed='-1.2'> EST. 12/05 </p>
         </section>
 
         <nav>

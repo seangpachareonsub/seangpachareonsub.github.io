@@ -234,6 +234,9 @@ html {
         font-size: 5vw;
       }
     }
+    &:nth-of-type(5) {
+      margin-bottom: 22vw;
+    }
   }
 
   .honne-container,
@@ -252,13 +255,24 @@ html {
     }
 
     #proj-text {
-      width: 30%;
+      width: 35%;
+      ion-icon {
+        color: pink;
+        font-size: 30px;
+        margin: -0.4vw 1vw 0 0 ;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: pink;
+      }
       p {
         text-align: justify;
         color: white;
+        font-size: 17px;
       }
       small {
-        font-size: 17.5px;
+        font-size: 18.5px;
         color: pink;
       }
       ul {
@@ -267,6 +281,7 @@ html {
         -moz-columns: 2;
         li {
           color: white;
+          font-size: 17px;
           list-style: initial;
         }
       }
@@ -311,15 +326,22 @@ html {
     }
   }
 
+  .honne-container {
+    #proj-text {
+      transform: translateY(-3.8%);
+    }
+  }
+
   .fin-container,
   .kap-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-end;
     padding-right: 5%;
     #proj-text {
-      width: 80%;
+      width: 77%;
       text-align: start;
-      transform: translateX(-8%);
+      transform: translateX(-13%);
+      margin-bottom: 5vw;
       p {
         width: 52%;
       }
@@ -328,7 +350,7 @@ html {
         font-family: "Montserrat";
       }
       ul {
-        width: 38%;
+        width: 40%;
       }
     }
 
@@ -359,9 +381,11 @@ html {
   }
 
   .kap-container {
+    flex-direction: column;
     align-items: flex-start;
     padding-left: 5%;
     #proj-text {
+      margin-bottom: -4vw;
       h1 {
         margin-left: -2%;
       }
@@ -372,10 +396,11 @@ html {
         width: 100%;
       }
       ul {
-        width: 70%;
+        width: 75%;
       }
     }
     #kap-image {
+      margin-bottom: 0vw;
       box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
       &::after {
         content: "PRJ WRK 002";
@@ -424,7 +449,7 @@ html {
     }
   }
 
-  .contact {
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -468,6 +493,7 @@ html {
       align-items: center;
       justify-content: space-evenly;
       width: 100%;
+      margin-top: 3vw;
       #socials {
         width: 30%;
         display: flex;
@@ -505,9 +531,15 @@ html {
         transition: 0.2s;
         user-select: none;
         outline: none;
+  
         &:hover {
           transform: scale(0.92);
           cursor: pointer;
+        }
+
+        @keyframes bounce {
+          0% {transform: scale(1.05)}
+          100% {transform: scale(0.95)}
         }
       }
     }
@@ -535,13 +567,13 @@ html {
   .fin-container,
   .pac-container,
   .kap-container {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center !important;
     padding: 0% !important;
 
     #proj-text {
       width: 80% !important;
-      margin: 8vw 0 15vw 0;
+      margin: 8vw 0 15vw 0 !important;
       transform: translate(0) !important;
       h1 {
         margin: 0 0 3vw 0 !important;
@@ -553,6 +585,9 @@ html {
       }
       p {
         width: 100% !important;
+      }
+      ion-icon {
+        margin: -0.8vw 2vw 0 0 !important;
       }
     }
 
@@ -581,7 +616,7 @@ html {
   }
 
   .honne-container {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
   }
 
   .kap-container {
@@ -598,7 +633,7 @@ html {
     }
   }
 
-  .contact {
+  form {
     padding-left: 3.5%;
     p {
       line-height: 8.3vw !important;
