@@ -64,15 +64,15 @@ const Contact = () => {
           <p > HELLO, </p>
 
           <p>
-            MY NAME IS <input name='personName'
+            MY NAME IS <input name='personName' autoComplete='off'
               type="text" required /> </p>
 
           <p>
-            HERE IS MY EMAIL <input name='personEmail'
+            HERE IS MY EMAIL <input name='personEmail' autoComplete='off'
               type="email" required /> </p>
 
           <p>
-            LET'S TALK ABOUT <input name='personMessage'
+            LET'S TALK ABOUT <input name='personMessage' autoComplete='off'
               type="text" required /> </p>
         </div>
 

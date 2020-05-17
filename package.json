@@ -1,11 +1,14 @@
 {
+  "homepage": "https://seangpachareonsub.github.io/",
   "name": "basic-react-webpack-setup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "webpack-dev-server --mode=development"
+    "serve": "webpack-dev-server --mode=development",
+    "build": "webpack -p",
+    "deploy": "npm build -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +35,7 @@
     "file-loader": "^6.0.0",
     "gsap": "^3.2.6",
     "hover-effect": "^1.1.0",
+    "jarallax": "^1.12.1",
     "moment": "^2.24.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

@@ -6,28 +6,16 @@
 
 body,
 html {
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
   background-attachment: fixed;
   background-color: #121212;
   scroll-behavior: smooth;
+  position: relative;
   &::-webkit-scrollbar {
     display: none;
   }
 }
-
-// .cursor {
-//   width: 500px;
-//   height: 300px;
-//   position: absolute;
-//   // animation: pulse 0.6s alternate infinite linear;
-//   transition: 0.5s ease-out;
-//   background: transparent;
-//   background-image: url('https://media.makeameme.org/created/smile-and-make.jpg');
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   z-index: 1;
-// }
 
 #root {
   width: 100vw;
@@ -41,16 +29,15 @@ html {
     height: 100vh;
     min-width: 100vw;
     background-color: #121212;
-    // background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=8f8b8f&density=7&opacity=20');
-    // margin: 10vw 0;
+
     .loading {
       height: 100%;
       width: 100%;
       background-color: #121212;
-      // background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=8f8b8f&density=7&opacity=20');
       display: flex;
       justify-content: center;
       align-items: center;
+
       .quote {
         width: 45%;
         color: white;
@@ -59,6 +46,7 @@ html {
           border-bottom: 1px solid white;
           padding-bottom: 4px;
           margin-bottom: 5%;
+          font-size: 18px;
         }
         p {
           text-align: justify;
@@ -67,6 +55,7 @@ html {
           }
           span {
             font-size: 16px;
+            color: pink;
             &:hover {
               cursor: pointer;
             }
@@ -99,16 +88,16 @@ html {
         left: 0;
         background-color: rgba(255, 255, 255, 0.575);
         height: 2px;
-        transition: 0.6s ease-out;
+        transition: 0.4s ease-out;
       }
 
       #count {
         position: absolute;
-        font-size: 90px;
+        font-size: 130px;
         font-family: "Saol Display";
         color: rgba(255, 255, 255, 0.94);
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-15px);
         font-weight: lighter;
       }
 
@@ -118,6 +107,7 @@ html {
         height: 2px;
         width: 0;
         left: 0;
+        z-index: 2;
       }
     }
     .content {
@@ -130,6 +120,13 @@ html {
       background-color: #121212;
       font-family: "Cormorant Garamond";
       font-weight: 300;
+      border: none;
+      z-index: 5;
+
+      .rellax {
+        opacity: 0;
+        display: none;
+      }
 
       #scroll {
         position: absolute;
@@ -141,6 +138,8 @@ html {
         background-color: white;
         transform: rotate(90deg);
         font-weight: bold;
+        opacity: 0;
+
         &::before {
           content: "CONCEPTUALIZE";
           display: block;
@@ -169,6 +168,7 @@ html {
         left: 2%;
         z-index: 5;
         width: 35%;
+
         ul {
           canvas {
             display: block;
@@ -178,6 +178,7 @@ html {
           }
           li {
             list-style: none;
+            opacity: 0;
           }
         }
       }
@@ -191,7 +192,7 @@ html {
         p {
           color: white;
           font-size: 13.3vw;
-          margin-bottom: -9vw;
+          margin-bottom: -9.5vw;
           padding: 0% 5%;
           letter-spacing: 2px;
           &:nth-of-type(1) {
@@ -259,7 +260,7 @@ html {
       ion-icon {
         color: pink;
         font-size: 30px;
-        margin: -0.4vw 1vw 0 0 ;
+        margin: -0.4vw 1vw 0 0;
       }
       a {
         display: flex;
@@ -343,14 +344,15 @@ html {
       transform: translateX(-13%);
       margin-bottom: 5vw;
       p {
-        width: 52%;
+        // width: 52%;
+        width: 70%;
       }
       h1 {
         margin-left: -1%;
         font-family: "Montserrat";
       }
       ul {
-        width: 40%;
+        width: 50%;
       }
     }
 
@@ -380,30 +382,81 @@ html {
     }
   }
 
+  .fin-container {
+    #proj-text {
+      &::before {
+        content: "PRJ IMAGE";
+        display: block;
+        position: absolute;
+        right: -5%;
+        color: lightsalmon;
+        font-weight: bold;
+        transform: rotate(90deg);
+        bottom: 5%;
+        border-bottom: 1px solid lightsalmon;
+      }
+    }
+    #fin-image {
+      &::before {
+        content: "PRJ WRK 004";
+        display: block;
+        position: absolute;
+        left: -35%;
+        color: lightsalmon;
+        font-weight: bold;
+        transform: rotate(-90deg);
+        bottom: -20%;
+        border-bottom: 1px solid lightsalmon;
+      }
+    }
+  }
+
   .kap-container {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 5%;
     #proj-text {
       margin-bottom: -4vw;
+
       h1 {
         margin-left: -2%;
       }
-      width: 45%;
+      width: 60%;
       align-self: flex-end;
-      transform: translateX(-25%);
       p {
         width: 100%;
       }
       ul {
         width: 75%;
       }
+      &::before {
+        content: "PRJ WRK 003";
+        display: block;
+        position: absolute;
+        left: -50%;
+        color: lightsalmon;
+        font-weight: bold;
+        transform: rotate(-90deg);
+        bottom: -10%;
+        border-bottom: 1px solid lightsalmon;
+      }
     }
     #kap-image {
-      margin-bottom: 0vw;
+      margin-bottom: 5vw;
       box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
       &::after {
         content: "PRJ WRK 002";
+      }
+      &::before {
+        content: "PRJ DESCRIPTION";
+        display: block;
+        position: absolute;
+        right: -38%;
+        color: lightsalmon;
+        font-weight: bold;
+        transform: rotate(90deg);
+        bottom: -7%;
+        border-bottom: 1px solid lightsalmon;
       }
     }
   }
@@ -516,7 +569,6 @@ html {
           font-size: 2.6vmax;
           color: white;
         }
-       
       }
       button {
         width: 200px;
@@ -531,15 +583,19 @@ html {
         transition: 0.2s;
         user-select: none;
         outline: none;
-  
+
         &:hover {
           transform: scale(0.92);
           cursor: pointer;
         }
 
         @keyframes bounce {
-          0% {transform: scale(1.05)}
-          100% {transform: scale(0.95)}
+          0% {
+            transform: scale(1.05);
+          }
+          100% {
+            transform: scale(0.95);
+          }
         }
       }
     }
@@ -547,6 +603,13 @@ html {
 }
 
 @media only screen and(max-width: 800px) {
+  .cursor {
+    display: none;
+  }
+  #count {
+    font-size: 95px !important;
+    transform: translateY(-9px) !important;
+  }
   .quote {
     width: 82% !important;
   }
@@ -590,6 +653,9 @@ html {
       ion-icon {
         margin: -0.8vw 2vw 0 0 !important;
       }
+      &::before {
+        display: none !important;
+      }
     }
 
     #honne-image {
@@ -602,16 +668,15 @@ html {
     #kap-image {
       width: 85vw !important;
       height: 45vw !important;
+      &::before {
+        display: none !important;
+      }
     }
 
     img {
       display: block !important;
       width: 86vw;
       height: 45vw;
-      margin-top: 40px;
-    }
-
-    #fin-imageTwo {
       margin-top: 15px;
     }
 
@@ -633,10 +698,14 @@ html {
   }
 
   .pac-container {
-    #proj-text h1 {
-      text-align: center;
-      font-size: 8.5vw !important;
+    #proj-text {
+      margin-bottom: 10vw !important;
+      h1 {
+        text-align: center;
+        font-size: 8.5vw !important;
+      }
     }
+    
   }
 
   form {
@@ -652,8 +721,8 @@ html {
       font-size: 4.5vw !important;
     }
     button {
-      width: 110px !important;
-      height: 110px !important;
+      width: 115px !important;
+      height: 115px !important;
       font-size: 16px !important;
     }
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Rellax from 'rellax'
 import hoverEffect from 'hover-effect'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import SiteModal from './SiteModal'
+
+import Rellax from 'rellax'
 
 
 const Projects = () => {
@@ -18,7 +19,7 @@ const Projects = () => {
       parent: document.querySelector('#honne-image'),
       intensity: 0.4,
       image1: 'https://i.imgur.com/NNtiUd2.png',
-      image2: 'https://i.imgur.com/AdRbDrq.png',
+      image2: 'https://i.imgur.com/uENHP3X.png',
       displacementImage: 'https://i.imgur.com/CyxD9X6.png',
       speedIn: 1.7,
       speedOut: 1.7,
@@ -29,7 +30,7 @@ const Projects = () => {
       parent: document.querySelector('#kap-image'),
       intensity: 0.4,
       image1: 'https://i.imgur.com/Tptws7T.png',
-      image2: 'https://i.imgur.com/MYtlWlw.png',
+      image2: 'https://i.imgur.com/pzvHIdN.png',
       displacementImage: 'https://i.imgur.com/4Os9Q7o.jpg',
       angle: Math.PI / 8,
       speedIn: 1.7,
@@ -95,7 +96,7 @@ const Projects = () => {
       <div className="honne-container">
         <div data-aos="fade-up"
           data-aos-offset="300"
-          data-aos-duration="800"
+          data-aos-duration="1000"
           data-aos-easing="ease"
           id='proj-text'>
           <h1> HONNE </h1>
@@ -126,10 +127,13 @@ const Projects = () => {
             <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
         </div>
 
-        <div data-aos="fade-left" data-aos-offset="300"
+        <div
+          data-aos="fade-left" data-aos-offset="300"
           data-aos-duration="800" data-aos-easing="ease"
           onMouseEnter={(e) => show(e)}
-          onMouseLeave={(e) => remove(e)} id="honne-image">
+          onMouseLeave={(e) => remove(e)}
+          id="honne-image">
+
           <p> 15.04.20 </p>
         </div>
       </div >
@@ -145,32 +149,36 @@ const Projects = () => {
           data-aos-duration="800" data-aos-easing="ease"
           src="https://i.imgur.com/MYtlWlw.png" alt="" />
         <div data-aos="fade-up" data-aos-offset="300"
-          data-aos-duration="800" data-aos-easing="ease"
+          data-aos-duration="1000" data-aos-easing="ease"
           id='proj-text'>
+
           <h1> KAP </h1>
-          <p> <small> PRJ CONCPT </small> <br />
-            A group development of a full stack application utilising a MERN stack.
-            Inspired by the COVID-19 lockdown, KAP features login authentication and
-            provides users with a collection of activity ideas whilst being kept indoors.
+          <div>
+            <p > <small> PRJ CONCPT </small> <br />
+              A group development of a full stack application utilising a MERN stack.
+              Inspired by the COVID-19 lockdown, KAP features login authentication and
+              provides users with a collection of activity ideas whilst being kept indoors.
             <br /> <br />
-            KAP was designed to bring people together through the sharing of ideas. The app
-            features CRUD operations giving users power to manage their uploaded content.
+              KAP was designed to bring people together through the sharing of ideas. The app
+              features CRUD operations giving users power to manage their uploaded content.
           </p>
-          <br />
-          <small> TECH FEATURED </small>
-          <ul>
-            <li> React.js </li>
-            <li> JavaScript (ES6) </li>
-            <li> MongoDB </li>
-            <li> Mongoose </li>
-            <li> Node.js </li>
-            <li> Express.js</li>
-            <li> HTML5/SASS </li>
-            <li> GreenSock Animation Platform </li>
-            <li> Axios </li>
-            <li> JSON Web Token </li>
-            <li> Nodemailer </li>
-          </ul>
+            <br />
+            <small> TECH FEATURED </small>
+            <ul>
+              <li> React.js </li>
+              <li> JavaScript (ES6) </li>
+              <li> MongoDB </li>
+              <li> Mongoose </li>
+              <li> Node.js </li>
+              <li> Express.js</li>
+              <li> HTML5/SASS </li>
+              <li> GreenSock Animation Platform </li>
+              <li> Axios </li>
+              <li> JSON Web Token </li>
+              <li> Nodemailer </li>
+            </ul>
+          </div>
+
           <br />
           <a href='https://github.com/seangpachareonsub/kap'>
             <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
@@ -184,13 +192,13 @@ const Projects = () => {
           onMouseLeave={(e) => remove(e)} id="fin-image">
           <p> 11.03.20 </p>
         </div>
-        <img id='fin-imageTwo' data-aos="fade-up" 
+        <img id='fin-imageTwo' data-aos="fade-up"
           data-aos-offset="300"
           data-aos-duration="800" data-aos-easing="ease"
           src="https://i.imgur.com/8jmRsRA.png" alt="" />
 
         <div data-aos="fade-up" data-aos-offset="300"
-          data-aos-duration="800" data-aos-easing="ease"
+          data-aos-duration="1000" data-aos-easing="ease"
           id='proj-text'>
           <h1> Financier </h1>
           <p> <small> PRJ CONCPT </small> <br />
@@ -226,7 +234,7 @@ const Projects = () => {
           <p> 20.01.20 </p>
         </div>
         <div data-aos="fade-left" data-aos-offset="300"
-          data-aos-duration="800" data-aos-easing="ease"
+          data-aos-duration="1000" data-aos-easing="ease"
           id='proj-text'>
           <h1> Pac-Man</h1>
           <p> <small> PRJ CONCPT </small> <br />

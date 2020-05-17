@@ -5,7 +5,6 @@ import { LiquidDistortionText } from 'react-text-fun'
 import Rellax from 'rellax'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import main from '../lib'
 
 const Landing = ({ showContent }) => {
 
@@ -13,9 +12,7 @@ const Landing = ({ showContent }) => {
   const [nav, setNav] = useState(['WHO\'S TALKING?', 'STUFF I\'VE DONE', 'STALK ME'])
 
   useEffect(() => {
-    // main()
     AOS.init()
-    // const rellax = new Rellax('.rellax')
   }, [])
 
   const cursor = {
@@ -62,7 +59,10 @@ const Landing = ({ showContent }) => {
       .to('.hide', 0.1, { display: 'none' })
       .to('.follow', 0.7, { height: '100%', ease: Expo.easeInOut }, '+=0.5')
       .to('.content', 0.7, { width: '100%', ease: Expo.easeInOut })
-      // .to('.title-lines', 0.4, { opacity: 1, stagger: 0.1 })
+      .to('.rellax', 0.1, { display: 'block' })
+      .to('.rellax', 0.6, { opacity: 1, stagger: 0.15, ease: Expo.easeInOut })
+      .to('#scroll, li', 0.2, { opacity: 1 })
+      .to('main', 0.1, { marginBottom: '15vw' })
   }
 
   const scroll = (e) => {
@@ -97,13 +97,13 @@ const Landing = ({ showContent }) => {
         <div className="quote">
           <h1> Define Thoughts </h1>
           <p>
-            <Typist avgTypingDelay={55} stdTypingDelay={45} cursor={cursor}>
+            <Typist avgTypingDelay={55} stdTypingDelay={65} cursor={cursor}>
               <Typist.Delay ms={1500} />
               Abstract ideas are concepts that need to be visualized,
-              as they cannot be illustrated through concrete (real) examples.
+              they cannot be illustrated through real examples.
               Explaining the progression of logic in a (computer)
-              program will be possible only if the reader can correctly visualize (imagine)
-            it in his mind. <br /> <br />
+              program will only be possible if the reader can correctly imagine
+              it. <br /> <br />
 
               <Typist.Delay ms={1000} />
               <span onClick={animate}> Click to visualize Folio '20</span>
@@ -121,7 +121,7 @@ const Landing = ({ showContent }) => {
       <div className='content'>
         <div id='scroll'></div>
 
-        {/* <section>
+        <section>
           <p className='rellax' data-rellax-speed='1.3'> VISUALIZE </p>
           <p className='rellax' data-rellax-speed='0.4'> DRAFT 009 OF </p>
           <p className='rellax' data-rellax-speed='-0.5'> FOLIO '20&copy; </p>
@@ -148,7 +148,7 @@ const Landing = ({ showContent }) => {
               )
             })}
           </ul>
-        </nav> */}
+        </nav>
       </div>
 
     </main >
