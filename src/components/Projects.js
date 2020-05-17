@@ -85,12 +85,19 @@ const Projects = () => {
 
   return (
     <>
-      <div id='para' data-aos="fade-up" >
+      <div id='para' data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-easing="ease"
+        data-aos-offset="200">
         <h1 className='section-title'> <small> (002) </small> Recent Work </h1>
       </div>
 
       <div className="honne-container">
-        <div id='proj-text'>
+        <div data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-duration="800"
+          data-aos-easing="ease"
+          id='proj-text'>
           <h1> HONNE </h1>
           <p> <small> PRJ CONCPT </small> <br />
             An individual project launching a full stack dating application
@@ -119,19 +126,27 @@ const Projects = () => {
             <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
         </div>
 
-        <div onMouseEnter={(e) => show(e)}
+        <div data-aos="fade-left" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          onMouseEnter={(e) => show(e)}
           onMouseLeave={(e) => remove(e)} id="honne-image">
           <p> 15.04.20 </p>
         </div>
       </div >
 
       <div className="kap-container">
-        <div onMouseEnter={(e) => show(e)}
+        <div data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          onMouseEnter={(e) => show(e)}
           onMouseLeave={(e) => remove(e)} id="kap-image">
           <p> 24.03.20 </p>
         </div>
-        <img src="https://i.imgur.com/MYtlWlw.png" alt="" />
-        <div id='proj-text'>
+        <img data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          src="https://i.imgur.com/MYtlWlw.png" alt="" />
+        <div data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          id='proj-text'>
           <h1> KAP </h1>
           <p> <small> PRJ CONCPT </small> <br />
             A group development of a full stack application utilising a MERN stack.
@@ -163,12 +178,20 @@ const Projects = () => {
       </div >
 
       <div className="fin-container">
-        <div onMouseEnter={(e) => show(e)}
+        <div data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          onMouseEnter={(e) => show(e)}
           onMouseLeave={(e) => remove(e)} id="fin-image">
           <p> 11.03.20 </p>
         </div>
-        <img src="https://i.imgur.com/8jmRsRA.png" alt="" />
-        <div id='proj-text'>
+        <img id='fin-imageTwo' data-aos="fade-up" 
+          data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          src="https://i.imgur.com/8jmRsRA.png" alt="" />
+
+        <div data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          id='proj-text'>
           <h1> Financier </h1>
           <p> <small> PRJ CONCPT </small> <br />
             A paired production of a React front-end application consuming a public API.
@@ -196,11 +219,15 @@ const Projects = () => {
       </div >
 
       <div className="pac-container">
-        <div onMouseEnter={(e) => show(e)}
+        <div data-aos="fade-right" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          onMouseEnter={(e) => show(e)}
           onMouseLeave={(e) => remove(e)} id="pac-image">
           <p> 20.01.20 </p>
         </div>
-        <div id='proj-text'>
+        <div data-aos="fade-left" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          id='proj-text'>
           <h1> Pac-Man</h1>
           <p> <small> PRJ CONCPT </small> <br />
             An individual recreation of the popular grid based game, Pac-Man. The game consists of

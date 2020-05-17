@@ -42,7 +42,7 @@ html {
     min-width: 100vw;
     background-color: #121212;
     // background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=8f8b8f&density=7&opacity=20');
-    margin: 10vw 0;
+    // margin: 10vw 0;
     .loading {
       height: 100%;
       width: 100%;
@@ -122,13 +122,13 @@ html {
     }
     .content {
       height: 100%;
-      width: 100%;
+      // width: 100%;
+      width: 0;
       position: absolute;
       left: 0;
       top: 0;
       background-color: #121212;
       font-family: "Cormorant Garamond";
-      // font-family: 'saol display';
       font-weight: 300;
 
       #scroll {
@@ -554,6 +554,7 @@ html {
     nav {
       width: 100% !important;
       left: -1% !important;
+      top: 5% !important;
     }
     section {
       height: 93% !important;
@@ -594,6 +595,7 @@ html {
     #honne-image {
       width: 250px !important;
       height: 570px !important;
+      margin-bottom: 20px !important;
     }
 
     #fin-image,
@@ -606,6 +608,10 @@ html {
       display: block !important;
       width: 86vw;
       height: 45vw;
+      margin-top: 40px;
+    }
+
+    #fin-imageTwo {
       margin-top: 15px;
     }
 
@@ -646,9 +652,9 @@ html {
       font-size: 4.5vw !important;
     }
     button {
-      width: 130px !important;
-      height: 130px !important;
-      font-size: 17px !important;
+      width: 110px !important;
+      height: 110px !important;
+      font-size: 16px !important;
     }
 
     #socials {

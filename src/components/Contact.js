@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import emailjs from 'emailjs-com'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Contact = () => {
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   const [messageInputs, setMessageInputs] = useState({
     personName: '',
@@ -40,22 +46,34 @@ const Contact = () => {
 
   return (
     <>
-      <div id='para'>
+      <div data-aos="fade-up"
+        data-aos-offset="300"
+        data-aos-duration="800" data-aos-easing="ease"
+        id='para'>
         <h1 className='section-title'>
           <small> (003) </small> <span> Talk to Me </span>
         </h1>
       </div>
 
-      <form onChange={(e) => updateMessage(e)} 
+      <form onChange={(e) => updateMessage(e)}
         onSubmit={(e) => submitMessage(e)}>
-        <div>
-          <p> HELLO, </p>
-          <p> MY NAME IS <input name='personName' 
-            type="text" required /> </p>
-          <p> HERE IS MY EMAIL <input name='personEmail'
-            type="email" required /> </p>
-          <p> LET'S TALK ABOUT <input name='personMessage'
-            type="text" required /> </p>
+        <div data-aos="fade-in"
+          data-aos-offset="200"
+          data-aos-delay='400'
+          data-aos-duration="1000" data-aos-easing="ease">
+          <p > HELLO, </p>
+
+          <p>
+            MY NAME IS <input name='personName'
+              type="text" required /> </p>
+
+          <p>
+            HERE IS MY EMAIL <input name='personEmail'
+              type="email" required /> </p>
+
+          <p>
+            LET'S TALK ABOUT <input name='personMessage'
+              type="text" required /> </p>
         </div>
 
         <section>

@@ -21,9 +21,13 @@ const App = () => {
   return (
     <div>
       <Landing showContent={() => showContent()} />
-      <About />
-      <Projects />
-      <Contact />
+
+      {display ? <>
+        <About />
+        <Projects />
+        <Contact />
+      </>
+        : null}
     </div>
 
   )

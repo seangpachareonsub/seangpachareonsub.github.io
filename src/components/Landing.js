@@ -7,15 +7,15 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import main from '../lib'
 
-const Landing = () => {
+const Landing = ({ showContent }) => {
 
   const [counter, setCounter] = useState(0)
   const [nav, setNav] = useState(['WHO\'S TALKING?', 'STUFF I\'VE DONE', 'STALK ME'])
 
   useEffect(() => {
-    main()
+    // main()
     AOS.init()
-    const rellax = new Rellax('.rellax')
+    // const rellax = new Rellax('.rellax')
   }, [])
 
   const cursor = {
@@ -53,8 +53,7 @@ const Landing = () => {
 
     const t1 = new TimelineLite({
       onComplete: () => {
-
-        // setDisplay(true)
+        showContent()
       }
     })
     t1
@@ -63,7 +62,7 @@ const Landing = () => {
       .to('.hide', 0.1, { display: 'none' })
       .to('.follow', 0.7, { height: '100%', ease: Expo.easeInOut }, '+=0.5')
       .to('.content', 0.7, { width: '100%', ease: Expo.easeInOut })
-      .to('.title-lines', 0.4, { opacity: 1, stagger: 0.1 })
+      // .to('.title-lines', 0.4, { opacity: 1, stagger: 0.1 })
   }
 
   const scroll = (e) => {
@@ -93,7 +92,7 @@ const Landing = () => {
   return (
 
     <main >
-      {/* <div className='loading'>
+      <div className='loading'>
 
         <div className="quote">
           <h1> Define Thoughts </h1>
@@ -116,21 +115,17 @@ const Landing = () => {
         <div className='hide' id='progress-bar' style={{ width: counter + '%' }} ></div>
         <p id='count' className='hide'> 0 - {counter}% </p>
 
-      </div> */}
+      </div>
 
 
       <div className='content'>
-
         <div id='scroll'></div>
 
-        <section>
-          <p className='rellax' data-rellax-speed='1.2'> VISUALIZE </p>
-
+        {/* <section>
+          <p className='rellax' data-rellax-speed='1.3'> VISUALIZE </p>
           <p className='rellax' data-rellax-speed='0.4'> DRAFT 009 OF </p>
-
-          <p className='rellax' data-rellax-speed='-0.4'> FOLIO '20&copy; </p>
-
-          <p className='rellax' data-rellax-speed='-1.2'> EST. 12/05 </p>
+          <p className='rellax' data-rellax-speed='-0.5'> FOLIO '20&copy; </p>
+          <p className='rellax' data-rellax-speed='-1.4'> EST. 12/05 </p>
         </section>
 
         <nav>
@@ -152,13 +147,8 @@ const Landing = () => {
                 </li>
               )
             })}
-
-            {/* <li onClick={(e) => scroll(e)}> WHOS'S TALKING? </li>
-            <li onClick={(e) => scroll(e)}> STUFF I'VE DONE </li>
-            <li onClick={(e) => scroll(e)}> STALK ME </li> */}
           </ul>
-        </nav>
-
+        </nav> */}
       </div>
 
     </main >
