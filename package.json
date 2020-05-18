@@ -32,12 +32,10 @@
     "emailjs-com": "^2.4.1",
     "gsap": "^3.2.6",
     "hover-effect": "^1.1.0",
-    "jarallax": "^1.12.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^5.1.2",
     "react-text-fun": "^1.0.0",
-    "react-typist": "^2.0.5",
-    "rellax": "^1.12.1"
+    "react-typist": "^2.0.5"
   }
 }

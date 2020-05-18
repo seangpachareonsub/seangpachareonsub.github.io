@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Typist from 'react-typist'
 import { LiquidDistortionText } from 'react-text-fun'
-import Rellax from 'rellax'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -14,7 +13,6 @@ const Landing = ({ showContent }) => {
   const [nav, setNav] = useState(['WHO\'S TALKING?', 'STUFF I\'VE DONE', 'STALK ME'])
 
   useEffect(() => {
-    const rellax = new Rellax('.rellax')
     AOS.init()
   }, [])
 
@@ -64,8 +62,8 @@ const Landing = ({ showContent }) => {
       .to('.hide', 0.1, { display: 'none' })
       .to('.follow', 0.7, { height: '100%', ease: Expo.easeInOut }, '+=0.5')
       .to('.content', 0.7, { width: '100%', ease: Expo.easeInOut })
-      .to('.rellax', 0.1, { display: 'block' })
-      .to('.rellax', 0.6, { opacity: 1, stagger: 0.15, ease: Expo.easeInOut })
+      .to('.title-lines', 0.1, { display: 'block' })
+      .to('.title-lines', 0.6, { opacity: 1, stagger: 0.15, ease: Expo.easeInOut })
       .to('#scroll, li', 0.2, { opacity: 1 })
       .to('main', 0.1, { marginBottom: '15vw' })
   }
@@ -124,10 +122,10 @@ const Landing = ({ showContent }) => {
         <div id='scroll'></div>
 
         <section>
-          <p className='rellax' data-rellax-speed='1.3'> VISUALIZE </p>
-          <p className='rellax' data-rellax-speed='0.4'> DRAFT 009 OF </p>
-          <p className='rellax' data-rellax-speed='-0.5'> FOLIO '20&copy; </p>
-          <p className='rellax' data-rellax-speed='-1.4'> EST. 12/05 </p>
+          <p className='title-lines'> VISUALIZE </p>
+          <p className='title-lines'> DRAFT 009 OF </p>
+          <p className='title-lines'> FOLIO '20&copy; </p>
+          <p className='title-lines'> EST. 12/05 </p>
         </section>
 
         <nav>
