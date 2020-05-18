@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { TimelineLite, Expo } from 'gsap'
 import Typist from 'react-typist'
 import { LiquidDistortionText } from 'react-text-fun'
 import Rellax from 'rellax'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+import { TimelineLite, gsap, CSSPlugin, Expo } from 'gsap'
+gsap.registerPlugin( CSSPlugin )
 
 const Landing = ({ showContent }) => {
 
@@ -12,6 +14,7 @@ const Landing = ({ showContent }) => {
   const [nav, setNav] = useState(['WHO\'S TALKING?', 'STUFF I\'VE DONE', 'STALK ME'])
 
   useEffect(() => {
+    const rellax = new Rellax('.rellax')
     AOS.init()
   }, [])
 

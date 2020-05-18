@@ -2,11 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
+  outline: none;
 }
 
 body,
 html {
-  min-width: 100vw;
+  width: 100vw;
   height: 100vh;
   background-attachment: fixed;
   background-color: #121212;
@@ -25,10 +27,12 @@ html {
   align-items: center;
   background-color: #121212;
 
+
   main {
     height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     background-color: #121212;
+   
 
     .loading {
       height: 100%;

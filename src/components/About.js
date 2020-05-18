@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
-import Rellax from 'rellax'
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const About = () => {
 
   useEffect(() => {
-    const rellax = new Rellax('.rellax')
     AOS.init()
 
   }, [])

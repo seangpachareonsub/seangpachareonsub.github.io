@@ -4,7 +4,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import SiteModal from './SiteModal'
 
-import Rellax from 'rellax'
 
 
 const Projects = () => {
@@ -13,7 +12,6 @@ const Projects = () => {
 
   useEffect(() => {
     AOS.init()
-    const rellax = new Rellax('.rellax')
 
     new hoverEffect({
       parent: document.querySelector('#honne-image'),
