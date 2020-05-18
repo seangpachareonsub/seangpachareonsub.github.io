@@ -18,7 +18,7 @@ const Projects = () => {
     new hoverEffect({
       parent: document.querySelector('#honne-image'),
       intensity: 0.4,
-      image1: 'https://i.imgur.com/NNtiUd2.png',
+      image1: 'https://i.imgur.com/2HgFJDD.png',
       image2: 'https://i.imgur.com/uENHP3X.png',
       displacementImage: 'https://i.imgur.com/CyxD9X6.png',
       speedIn: 1.7,
@@ -35,7 +35,7 @@ const Projects = () => {
       angle: Math.PI / 8,
       speedIn: 1.7,
       speedOut: 1.7,
-      imagesRatio: 0.52
+      imagesRatio: 0.5
     })
 
     new hoverEffect({
@@ -47,7 +47,7 @@ const Projects = () => {
       speedIn: 1.7,
       speedOut: 1.7,
       angle: Math.PI / 8,
-      imagesRatio: 0.52
+      imagesRatio: 0.5
     })
 
     new hoverEffect({
@@ -154,35 +154,39 @@ const Projects = () => {
 
           <h1> KAP </h1>
           <div>
-            <p > <small> PRJ CONCPT </small> <br />
-              A group development of a full stack application utilising a MERN stack.
-              Inspired by the COVID-19 lockdown, KAP features login authentication and
-              provides users with a collection of activity ideas whilst being kept indoors.
-            <br /> <br />
-              KAP was designed to bring people together through the sharing of ideas. The app
-              features CRUD operations giving users power to manage their uploaded content.
-          </p>
-            <br />
-            <small> TECH FEATURED </small>
-            <ul>
-              <li> React.js </li>
-              <li> JavaScript (ES6) </li>
-              <li> MongoDB </li>
-              <li> Mongoose </li>
-              <li> Node.js </li>
-              <li> Express.js</li>
-              <li> HTML5/SASS </li>
-              <li> GreenSock Animation Platform </li>
-              <li> Axios </li>
-              <li> JSON Web Token </li>
-              <li> Nodemailer </li>
-            </ul>
-          </div>
 
+          </div>
+          <p > <small> PRJ CONCPT </small> <br />
+            A group development of a full stack application utilising a MERN stack.
+            Inspired by the COVID-19 lockdown, KAP features login authentication and
+            provides users with a collection of activity ideas whilst being kept indoors.
+            <br /> <br />
+            KAP was designed to bring people together through the sharing of ideas. The app
+            features CRUD operations giving users power to manage their uploaded content.
+          </p>
+          <br />
+          <small> TECH FEATURED </small>
+          <ul>
+            <li> React.js </li>
+            <li> JavaScript (ES6) </li>
+            <li> MongoDB </li>
+            <li> Mongoose </li>
+            <li> Node.js </li>
+            <li> Express.js</li>
+            <li> HTML5/SASS </li>
+            <li> GreenSock Animation Platform </li>
+            <li> Axios </li>
+            <li> JSON Web Token </li>
+            <li> Nodemailer </li>
+          </ul>
           <br />
           <a href='https://github.com/seangpachareonsub/kap'>
             <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
         </div>
+        <svg id='circle-1' width="23vw" height="23vw" className="circle">
+          <circle cx="11.5vw" cy="11.5vw" r="11.4vw" />
+        </svg>
+        <div className="arrow"></div>
       </div >
 
       <div className="fin-container">
@@ -224,6 +228,11 @@ const Projects = () => {
           <a href='https://github.com/seangpachareonsub/financier'>
             <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
         </div>
+
+        <svg id='circle-1' width="23vw" height="23vw" className="circle">
+          <circle cx="11.5vw" cy="11.5vw" r="11.4vw" />
+        </svg>
+        <div className="arrow"></div>
       </div >
 
       <div className="pac-container">
@@ -253,12 +262,10 @@ const Projects = () => {
           <a href='https://github.com/seangpachareonsub/pacman'>
             <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
         </div>
-
-
-        {modalOpen ?
-          <SiteModal setModal={() => modal()} />
-          : null}
       </div >
+
+  
+      <h6> More projects coming soon ... </h6>
 
 
     </>

@@ -19,8 +19,7 @@ const About = () => {
         data-aos-delay="100"
         data-aos-duration="800"
         data-aos-easing="ease">
-        <h1 className='section-title' > <small> (001) </small>Hello, I'm Kenn.</h1>
-        <p> I'm a minimal and clean design addict with a front-end focus.  </p>
+        <h1 className='section-title' > <small> (001) </small> WHO AM I?</h1>
       </div>
 
       <div id='para'
@@ -28,8 +27,22 @@ const About = () => {
         data-aos-offset="250"
         data-aos-duration="800"
         data-aos-easing="ease">
+        <h2> Hello, I'm Kenn. </h2>
         <p>
-          I'm also Junior <small> full-stack</small> Developer.
+        I'm a Junior Full Stack Developer and a recent graduate of the Software Engineering 
+        programme at General Assembly, London.
+        </p>
+      </div>
+
+      <div id='para'
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="250"
+        data-aos-easing="ease">
+        <p>
+          I create projects under the notion that "less is more" and my work
+          reflects my addiction for minimal and clean design as well as my 
+          desire to push boundaries.
         </p>
       </div>
 
@@ -40,21 +53,9 @@ const About = () => {
         data-aos-offset="250"
         data-aos-easing="ease">
         <p >
-          I create projects under the notion that <small> "less is more"</small> and my work
-          reflects my desire to learn and push boundaries.
-        </p>
-      </div>
-
-
-      <div id='para'
-        data-aos="fade-up"
-        data-aos-duration="800"
-        data-aos-offset="250"
-        data-aos-easing="ease">
-        <p >
-          Beyond cultivating my ability to write <small> good code</small> and
-          my perception in <small> UI design</small>, my aim is to take coding
-          into the professional dimension.
+          Beyond cultivating my overall ability to write good code, 
+          I am currently learning Redux, Jest and basic UX design to further 
+          my front end focus.
         </p>
       </div>
 
@@ -65,8 +66,8 @@ const About = () => {
         data-aos-duration="800"
         data-aos-easing="ease">
         <p>
-          I strive to bring <small> value</small> and <small> continously grow</small> myself.
-          Browse through what I've done recently.
+          My aim is to take coding into the professional dimension where
+          I hope to bring value and continously grow myself.
         </p>
       </div>
 

@@ -24,25 +24,27 @@ const Landing = ({ showContent }) => {
   }
 
   const animate = () => {
+    setTimeout(() => {
 
-    const t1 = new TimelineLite({
-      onComplete: () => {
-        const count = setInterval(() => {
-          setCounter(counter => {
-            counter < 100 ? setCounter(counter + 1) : (
-              clearInterval(count),
-              setCounter(100),
-              reveal()
-            )
-          })
-        }, 30)
-      }
-    })
+      const t1 = new TimelineLite({
+        onComplete: () => {
+          const count = setInterval(() => {
+            setCounter(counter => {
+              counter < 100 ? setCounter(counter + 1) : (
+                clearInterval(count),
+                setCounter(100),
+                reveal()
+              )
+            })
+          }, 25)
+        }
+      })
+      t1
+        .to('.quote', 0.7, { opacity: 0 })
+        .to('quote', 0.1, { display: 'none' })
+        .to('#count', 0.3, { opacity: 1 })
 
-    t1
-      .to('.quote', 0.7, { opacity: 0 })
-      .to('quote', 0.1, { display: 'none' })
-      .to('#count', 0.3, { opacity: 1 })
+    }, 2000)
   }
 
 
@@ -97,16 +99,13 @@ const Landing = ({ showContent }) => {
         <div className="quote">
           <h1> Define Thoughts </h1>
           <p>
-            <Typist avgTypingDelay={55} stdTypingDelay={65} cursor={cursor}>
+            <Typist avgTypingDelay={55} onTypingDone={animate} stdTypingDelay={65} cursor={cursor}>
               <Typist.Delay ms={1500} />
               Abstract ideas are concepts that need to be visualized,
               they cannot be illustrated through real examples.
               Explaining the progression of logic in a (computer)
               program will only be possible if the reader can correctly imagine
-              it. <br /> <br />
-
-              <Typist.Delay ms={1000} />
-              <span onClick={animate}> Click to visualize Folio '20</span>
+              it.
             </Typist>
           </p>
         </div>

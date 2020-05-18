@@ -50,16 +50,6 @@ html {
         }
         p {
           text-align: justify;
-          &:hover {
-            cursor: pointer;
-          }
-          span {
-            font-size: 16px;
-            color: pink;
-            &:hover {
-              cursor: pointer;
-            }
-          }
 
           .Typist .Cursor {
             display: inline;
@@ -214,17 +204,26 @@ html {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    // font-family: 'raleway';
+
+    h2 {
+      font-size: 8.5vw;
+      width: 80%;
+      small {
+        font-size: 8.5vw;
+      }
+    }
 
     h1 {
       font-size: 9.7vw;
       width: 80%;
-      // font-family: "saol display";
-      font-family: "raleway";
       color: pink;
       font-weight: bolder;
+      font-family: 'raleway';
       small {
         font-size: 4vw;
+      }
+      &:nth-of-type(2) {
+        color: white;
       }
     }
 
@@ -338,13 +337,62 @@ html {
     flex-direction: column-reverse;
     align-items: flex-end;
     padding-right: 5%;
+    position: relative;
+
+    .arrow {
+      width: 6vw;
+      height: 1.7px;
+      background: white;
+      transform: rotate(90deg);
+      position: absolute;
+      right: 13.35vw;
+      top: 24vw;
+      &::after {
+        content: '';
+        display: block;
+        width: 3vmax;
+        height: 1.7px;
+        background-color: white;
+        position: absolute;
+        right: -5px; 
+        top: -1vw;
+        transform: rotate(40deg);
+      }
+      &::before {
+        content: '';
+        display: block;
+        width: 3vmax;
+        height: 1.7px;
+        background-color: white;
+        position: absolute;
+        right: -5px;
+        bottom: -1vw;
+        transform: rotate(-42deg);
+      }
+    }
+
+    #circle-1 {
+      stroke-dasharray: 1300;
+      stroke-dashoffset: 1300;
+      animation: dash 2s linear forwards;
+      fill: transparent;
+      stroke: white;
+      position: absolute;
+      right: 5vw;
+      top: 13vw;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
     #proj-text {
-      width: 77%;
+      width: 74%;
       text-align: start;
-      transform: translateX(-13%);
+      transform: translateX(-19%);
       margin-bottom: 5vw;
       p {
-        // width: 52%;
         width: 70%;
       }
       h1 {
@@ -358,8 +406,8 @@ html {
 
     #fin-image,
     #kap-image {
-      width: 63vw;
-      height: 33vw;
+      width: 60vw;
+      height: 30vw;
       position: relative;
       margin-bottom: 5vw;
       p {
@@ -382,46 +430,22 @@ html {
     }
   }
 
-  .fin-container {
-    #proj-text {
-      &::before {
-        content: "PRJ IMAGE";
-        display: block;
-        position: absolute;
-        right: -5%;
-        color: lightsalmon;
-        font-weight: bold;
-        transform: rotate(90deg);
-        bottom: 5%;
-        border-bottom: 1px solid lightsalmon;
-      }
-    }
-    #fin-image {
-      &::before {
-        content: "PRJ WRK 004";
-        display: block;
-        position: absolute;
-        left: -35%;
-        color: lightsalmon;
-        font-weight: bold;
-        transform: rotate(-90deg);
-        bottom: -20%;
-        border-bottom: 1px solid lightsalmon;
-      }
-    }
-  }
-
   .kap-container {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 5%;
+    position: relative;
+    .arrow {
+      transform: rotate(120deg);
+    }
     #proj-text {
-      margin-bottom: -4vw;
-
+      width: 60%;
+      text-align: start;
+      transform: translateX(-9%);
+      margin-bottom: -6vw;
       h1 {
         margin-left: -2%;
       }
-      width: 60%;
       align-self: flex-end;
       p {
         width: 100%;
@@ -429,34 +453,11 @@ html {
       ul {
         width: 75%;
       }
-      &::before {
-        content: "PRJ WRK 003";
-        display: block;
-        position: absolute;
-        left: -50%;
-        color: lightsalmon;
-        font-weight: bold;
-        transform: rotate(-90deg);
-        bottom: -10%;
-        border-bottom: 1px solid lightsalmon;
-      }
     }
     #kap-image {
-      margin-bottom: 5vw;
       box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
       &::after {
         content: "PRJ WRK 002";
-      }
-      &::before {
-        content: "PRJ DESCRIPTION";
-        display: block;
-        position: absolute;
-        right: -38%;
-        color: lightsalmon;
-        font-weight: bold;
-        transform: rotate(90deg);
-        bottom: -7%;
-        border-bottom: 1px solid lightsalmon;
       }
     }
   }
@@ -464,6 +465,8 @@ html {
   .pac-container {
     justify-content: space-around;
     padding-left: 5%;
+    position: relative;
+
     #pac-image {
       width: 35vw;
       height: 40vw;
@@ -500,6 +503,13 @@ html {
         columns: 1;
       }
     }
+  }
+
+  h6 {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 15vw;
+    color: rgb(150, 148, 148);
   }
 
   form {
@@ -603,6 +613,12 @@ html {
 }
 
 @media only screen and(max-width: 800px) {
+  svg {
+    display: none;
+  }
+  .arrow{
+    display: none;
+  }
   .cursor {
     display: none;
   }
@@ -705,7 +721,6 @@ html {
         font-size: 8.5vw !important;
       }
     }
-    
   }
 
   form {
