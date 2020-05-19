@@ -126,7 +126,7 @@ const Projects = () => {
         </div>
 
         <div
-          data-aos="fade-left" data-aos-offset="300"
+          data-aos="fade-up" data-aos-offset="300"
           data-aos-duration="800" data-aos-easing="ease"
           onMouseEnter={(e) => show(e)}
           onMouseLeave={(e) => remove(e)}
