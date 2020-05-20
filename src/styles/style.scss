@@ -106,8 +106,8 @@ html {
     }
     .content {
       height: 100%;
-      // width: 100%;
-      width: 0;
+      width: 100%;
+      // width: 0;
       position: absolute;
       left: 0;
       top: 0;
@@ -208,6 +208,8 @@ html {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    transition: 0.3s ease-out;
+    will-change: transform;
 
     h2 {
       font-size: 8.5vw;
@@ -247,6 +249,8 @@ html {
   .fin-container,
   .pac-container,
   .kap-container {
+    transition: 0.3s ease-out;
+    will-change: transform;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
@@ -594,12 +598,12 @@ html {
         font-size: 22px;
         font-family: "raleway";
         font-weight: bold;
-        transition: 0.2s;
+        transition: 0.25s ease-out;
         user-select: none;
         outline: none;
 
         &:hover {
-          transform: scale(0.92);
+          transform: scale(0.91);
           cursor: pointer;
         }
 

@@ -9,9 +9,11 @@ import SiteModal from './SiteModal'
 const Projects = () => {
 
   const [modalOpen, setModalOpen] = useState(false)
+  const [projContainer, setProjContainer] = useState(['.honne', '.kap', '.fin', '.pac'])
 
   useEffect(() => {
     AOS.init()
+    
 
     new hoverEffect({
       parent: document.querySelector('#honne-image'),
@@ -40,7 +42,7 @@ const Projects = () => {
       parent: document.querySelector('#fin-image'),
       intensity: 0.4,
       image1: 'https://i.imgur.com/LXtbJSv.png',
-      image2: 'https://i.imgur.com/8jmRsRA.png',
+      image2: 'https://i.imgur.com/2qUvTgr.png',
       displacementImage: 'https://i.imgur.com/CyxD9X6.png',
       speedIn: 1.7,
       speedOut: 1.7,
@@ -59,6 +61,19 @@ const Projects = () => {
       angle: Math.PI / 5,
       imagesRatio: 1.17
     })
+
+    const containers = projContainer.map(el => document.querySelector(el + '-container'))
+    let currentPos = window.pageYOffset
+    const distort = () => {
+      const newPos = window.pageYOffset
+      const diff = newPos - currentPos
+      const speed = diff * 0.06
+
+      containers.map(el => el.style.transform = `skewY(${speed}deg)`)
+      currentPos = newPos
+      requestAnimationFrame(distort)
+    }
+    distort()
 
 
 

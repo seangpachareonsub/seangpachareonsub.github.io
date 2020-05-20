@@ -7,7 +7,19 @@ const About = () => {
 
   useEffect(() => {
     AOS.init()
+    const text = Array.from(document.querySelectorAll('#para'))
+    let currentPos = window.pageYOffset
 
+    const distort = () => {
+      const newPos = window.pageYOffset
+      const diff = newPos - currentPos
+      const speed = diff * 0.06
+
+      text.map(el => el.style.transform = `skewY(${speed}deg)`)
+      currentPos = newPos
+      requestAnimationFrame(distort)
+    }
+    distort()
   }, [])
 
   return (

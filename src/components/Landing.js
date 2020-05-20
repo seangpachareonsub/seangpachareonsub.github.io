@@ -95,7 +95,7 @@ const Landing = ({ showContent }) => {
   return (
 
     <main >
-      <div className='loading'>
+      {/* <div className='loading'>
 
         <div className="quote">
           <h1> Define Thoughts </h1>
@@ -115,7 +115,7 @@ const Landing = ({ showContent }) => {
         <div className='hide' id='progress-bar' style={{ width: counter + '%' }} ></div>
         <p id='count' className='hide'> 0 {counter}% </p>
 
-      </div>
+      </div> */}
 
 
       <div className='content'>
