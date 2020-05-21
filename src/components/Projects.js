@@ -175,7 +175,7 @@ const Projects = () => {
             provides users with a collection of activity ideas whilst being kept indoors.
             <br /> <br />
             KAP was designed to bring people together through the sharing of ideas. The app
-            features CRUD operations giving users power to manage their uploaded content.
+            utilises CRUD operations giving users power to manage their uploaded content.
           </p>
           <br />
           <small> TECH FEATURED </small>
@@ -279,8 +279,6 @@ const Projects = () => {
 
   
       <h6> More projects coming soon ... </h6>
-
-
     </>
   )
 }
