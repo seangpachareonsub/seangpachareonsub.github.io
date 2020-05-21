@@ -12,7 +12,7 @@ import Contact from './components/Contact'
 
 const App = () => {
 
-  const [display, setDisplay] = useState(true)
+  const [display, setDisplay] = useState(false)
 
   function showContent() {
     setDisplay(true)
