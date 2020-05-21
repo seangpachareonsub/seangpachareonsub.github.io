@@ -13,7 +13,7 @@ const About = () => {
     const distort = () => {
       const newPos = window.pageYOffset
       const diff = newPos - currentPos
-      const speed = diff * 0.06
+      const speed = diff * 0.075
 
       text.map(el => el.style.transform = `skewY(${speed}deg)`)
       currentPos = newPos
