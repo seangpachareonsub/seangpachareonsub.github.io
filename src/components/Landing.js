@@ -64,7 +64,7 @@ const Landing = ({ showContent }) => {
       .to('.content', 0.7, { width: '100%', ease: Expo.easeInOut })
       .to('.title-lines', 0.1, { display: 'block' })
       .to('.title-lines', 0.6, { opacity: 1, stagger: 0.15, ease: Expo.easeInOut })
-      .to('#scroll, li', 0.2, { opacity: 1 })
+      .to('#scroll, li', 0.4, { opacity: 1 }, '-=0.4')
       .to('main', 0.1, { marginBottom: '15vw' })
   }
 
@@ -98,7 +98,7 @@ const Landing = ({ showContent }) => {
       <div className='loading'>
 
         <div className="quote">
-          <h1> Define Thoughts </h1>
+          <h1> Define My Thoughts </h1>
           <p>
             <Typist avgTypingDelay={55} onTypingDone={animate} stdTypingDelay={65} cursor={cursor}>
               <Typist.Delay ms={1500} />
@@ -119,13 +119,13 @@ const Landing = ({ showContent }) => {
 
 
       <div className='content'>
-        <div id='scroll'></div>
+        <div id='scroll'>FOLIO'20 </div>
 
         <section>
-          <p className='title-lines'> VISUALIZE </p>
-          <p className='title-lines'> DRAFT 009 OF </p>
-          <p className='title-lines'> FOLIO '20&copy; </p>
-          <p className='title-lines'> EST. 12/05 </p>
+          <p className='title-lines'> <span>“</span>C<span>o</span>DE<span>R</span>,</p>
+          <p className='title-lines'>  DESI<span>G</span>N <span>A</span>DDICT,  </p>
+          <p className='title-lines'>  <span>A</span>BST<span>RA</span>CT </p>
+          <p className='title-lines'>T<span>H</span>INKE<span>R.”</span></p>
         </section>
 
         <nav>
@@ -136,11 +136,11 @@ const Landing = ({ showContent }) => {
                 <li key={i} onClick={(e) => scroll(e)} >
                   <LiquidDistortionText
                     text={'-' + ' ' + nav}
-                    fontSize={20}
+                    fontSize={19}
                     speed={0.3}
                     volatility={0.023}
                     fill='pink'
-                    fontFamily='raleway'
+                    fontFamily='arial'
                     fontWeight={500}
                     paddingRight={5}
                   />

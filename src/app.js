@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import 'bulma'
 import './styles/style.scss'
@@ -8,11 +8,17 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 
+// import main from './lib'
+
 
 
 const App = () => {
 
   const [display, setDisplay] = useState(false)
+
+  useEffect(() => {
+    // main()
+  }, [])
 
   function showContent() {
     setDisplay(true)

@@ -1,11 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 
 const SiteModal = ({ setModal }) => {
-
-  useEffect(() => {
-    document.body.style.zoom = '90%'
-  })
 
   return (
     <div className='modal is-active'>
@@ -13,7 +9,7 @@ const SiteModal = ({ setModal }) => {
 
       <div className="modal-content">
 
-        <iframe name='site_iframe'></iframe>
+        <iframe src='https://ga-honne.herokuapp.com/' name='site_iframe'></iframe>
 
       </div>
     </div>

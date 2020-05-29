@@ -6,14 +6,15 @@ import SiteModal from './SiteModal'
 
 
 
+
 const Projects = () => {
 
   const [modalOpen, setModalOpen] = useState(false)
   const [projContainer, setProjContainer] = useState(['.honne', '.kap', '.fin', '.pac'])
 
+
   useEffect(() => {
     AOS.init()
-    
 
     new hoverEffect({
       parent: document.querySelector('#honne-image'),
@@ -67,29 +68,27 @@ const Projects = () => {
     const distort = () => {
       const newPos = window.pageYOffset
       const diff = newPos - currentPos
-      const speed = diff * 0.075
+      const speed = diff * 0.05
 
       containers.map(el => el.style.transform = `skewY(${speed}deg)`)
       currentPos = newPos
       requestAnimationFrame(distort)
     }
     distort()
-
-
-
   }, [])
 
+  let text
+
   const show = (e) => {
-    e.target.firstChild.innerText = 'EXPLORE'
+    e.target.firstChild.innerText = 'CLICK TO EXPLORE APP 🧐'
   }
 
   const remove = (e) => {
     const images = ['honne-image', 'kap-image', 'fin-image', 'pac-image']
     const dates = ['15.04.20', '24.03.20', '11.03.20', '20.01.20']
 
-    images.map((el, i) => {
-      e.target.id === el ? e.target.firstChild.innerText = dates[i] : null
-    })
+    images.map((el, i) => e.target.id === el ? e.target.firstChild.innerText = dates[i] : null)
+
   }
 
   const modal = () => {
@@ -99,6 +98,7 @@ const Projects = () => {
 
   return (
     <>
+
       <div id='para' data-aos="fade-up"
         data-aos-duration="800"
         data-aos-easing="ease"
@@ -106,12 +106,15 @@ const Projects = () => {
         <h1 className='section-title'> <small> (002) </small> Recent Work </h1>
       </div>
 
+
+
       <div className="honne-container">
         <div data-aos="fade-up"
           data-aos-offset="300"
           data-aos-duration="1000"
           data-aos-easing="ease"
           id='proj-text'>
+
           <h1> HONNE </h1>
           <p> <small> PRJ CONCPT </small> <br />
             An individual project launching a full stack dating application
@@ -139,25 +142,28 @@ const Projects = () => {
           <a href='https://github.com/seangpachareonsub/honne'>
             <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
         </div>
+        <a href="https://ga-honne.herokuapp.com/" target='_blank'>
+          <div
+            data-aos="fade-up" data-aos-offset="300"
+            data-aos-duration="800" data-aos-easing="ease"
+            onMouseEnter={(e) => show(e)}
+            onMouseLeave={(e) => remove(e)}
+            id="honne-image">
 
-        <div
-          data-aos="fade-up" data-aos-offset="300"
-          data-aos-duration="800" data-aos-easing="ease"
-          onMouseEnter={(e) => show(e)}
-          onMouseLeave={(e) => remove(e)}
-          id="honne-image">
-
-          <p> 15.04.20 </p>
-        </div>
+            <p> 15.04.20 </p>
+          </div>
+        </a>
       </div >
 
       <div className="kap-container">
-        <div data-aos="fade-up" data-aos-offset="300"
-          data-aos-duration="800" data-aos-easing="ease"
-          onMouseEnter={(e) => show(e)}
-          onMouseLeave={(e) => remove(e)} id="kap-image">
-          <p> 24.03.20 </p>
-        </div>
+        <a href="https://ga-kap.herokuapp.com/" target='_blank'>
+          <div data-aos="fade-up" data-aos-offset="300"
+            data-aos-duration="800" data-aos-easing="ease"
+            onMouseEnter={(e) => show(e)}
+            onMouseLeave={(e) => remove(e)} id="kap-image">
+            <p> 24.03.20 </p>
+          </div>
+        </a>
         <img data-aos="fade-up" data-aos-offset="300"
           data-aos-duration="800" data-aos-easing="ease"
           src="https://i.imgur.com/MYtlWlw.png" alt="" />
@@ -203,12 +209,14 @@ const Projects = () => {
       </div >
 
       <div className="fin-container">
-        <div data-aos="fade-up" data-aos-offset="300"
-          data-aos-duration="800" data-aos-easing="ease"
-          onMouseEnter={(e) => show(e)}
-          onMouseLeave={(e) => remove(e)} id="fin-image">
-          <p> 11.03.20 </p>
-        </div>
+        <a href="http://seangpachareonsub.com/financier/" target='_blank'>
+          <div data-aos="fade-up" data-aos-offset="300"
+            data-aos-duration="800" data-aos-easing="ease"
+            onMouseEnter={(e) => show(e)}
+            onMouseLeave={(e) => remove(e)} id="fin-image">
+            <p> 11.03.20 </p>
+          </div>
+        </a>
         <img id='fin-imageTwo' data-aos="fade-up"
           data-aos-offset="300"
           data-aos-duration="800" data-aos-easing="ease"
@@ -249,12 +257,14 @@ const Projects = () => {
       </div >
 
       <div className="pac-container">
-        <div data-aos="fade-right" data-aos-offset="300"
-          data-aos-duration="800" data-aos-easing="ease"
-          onMouseEnter={(e) => show(e)}
-          onMouseLeave={(e) => remove(e)} id="pac-image">
-          <p> 20.01.20 </p>
-        </div>
+        <a href="http://seangpachareonsub.com/pac-man/src/index.html" target='_blank'>
+          <div data-aos="fade-right" data-aos-offset="300"
+            data-aos-duration="800" data-aos-easing="ease"
+            onMouseEnter={(e) => show(e)}
+            onMouseLeave={(e) => remove(e)} id="pac-image">
+            <p> 20.01.20 </p>
+          </div>
+        </a>
         <div data-aos="fade-left" data-aos-offset="300"
           data-aos-duration="1000" data-aos-easing="ease"
           id='proj-text'>
@@ -277,8 +287,10 @@ const Projects = () => {
         </div>
       </div >
 
-  
+
       <h6> More projects coming soon ... </h6>
+
+      {/* {modalOpen ? <SiteModal /> : null} */}
     </>
   )
 }

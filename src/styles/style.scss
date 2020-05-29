@@ -27,12 +27,10 @@ html {
   align-items: center;
   background-color: #121212;
 
-
   main {
     height: 100vh;
     width: 100vw;
     background-color: #121212;
-   
 
     .loading {
       height: 100%;
@@ -49,7 +47,7 @@ html {
         h1 {
           border-bottom: 1px solid white;
           padding-bottom: 4px;
-          margin-bottom: 5%;
+          margin-bottom: 3%;
           font-size: 18px;
         }
         p {
@@ -112,53 +110,23 @@ html {
       left: 0;
       top: 0;
       background-color: #121212;
-      font-family: "Cormorant Garamond";
       font-weight: 300;
       border: none;
       z-index: 5;
 
-      .title-lines {
-        opacity: 0;
-        display: none;
-      }
-
       #scroll {
         position: absolute;
-        right: 2%;
-        bottom: 10%;
-        display: block;
-        height: 1px;
-        width: 90px;
-        background-color: white;
-        transform: rotate(90deg);
-        font-weight: bold;
+        right: 5%;
+        bottom: 4%;
         opacity: 0;
-
-        &::before {
-          content: "CONCEPTUALIZE";
-          display: block;
-          font-family: "raleway";
-          color: white;
-          position: absolute;
-          left: -150px;
-          top: -10px;
-        }
-        &::after {
-          content: "";
-          display: block;
-          background-color: white;
-          position: absolute;
-          right: -1.3px;
-          top: -6px;
-          height: 1px;
-          width: 23px;
-          transform: rotate(30deg);
-        }
+        font-family: "Libre Barcode 39 Extended Text", cursive;
+        color: pink;
+        font-size: 37px;
       }
 
       nav {
         position: fixed;
-        top: 7%;
+        top: 5%;
         left: 2%;
         z-index: 5;
         width: 35%;
@@ -184,16 +152,24 @@ html {
         flex-direction: column;
         justify-content: center;
         p {
+          opacity: 0;
+          display: none;
           color: white;
-          font-size: 13.3vw;
-          margin-bottom: -9.5vw;
+          font-size: 12vw;
+          margin-bottom: -6.5vw;
           padding: 0% 5%;
           letter-spacing: 2px;
           &:nth-of-type(1) {
             text-align: end;
           }
           &:nth-of-type(3) {
-            padding-left: 12.5%;
+            text-align: center;
+          }
+
+          span {
+            font-family: "Major Mono Display", monospace;
+            color: rgb(150, 149, 149);
+            font-size: 11.3vw;
           }
         }
       }
@@ -224,23 +200,28 @@ html {
       width: 80%;
       color: pink;
       font-weight: bolder;
-      font-family: 'raleway';
-      small {
-        font-size: 4vw;
-      }
+      font-family: "raleway";
       &:nth-of-type(2) {
         color: white;
       }
+    }
+    small {
+      font-family: "Major Mono Display", monospace;
+      font-size: 3vw;
     }
 
     p {
       width: 80%;
       font-size: 5vw;
-      small {
-        font-size: 5vw;
+      
+      span {
+        font-style: italic;
+        text-decoration: line-through;
+        // color: rgb(165, 165, 165);
+        color: lightsalmon
       }
     }
-    &:nth-of-type(5) {
+    &:nth-of-type(6) {
       margin-bottom: 22vw;
     }
   }
@@ -264,6 +245,13 @@ html {
 
     #proj-text {
       width: 35%;
+      h1 {
+        z-index: 1;
+        font-size: 8.9vmax;
+        font-family: "poiret one";
+        color: white;
+      }
+
       ion-icon {
         color: pink;
         font-size: 30px;
@@ -296,6 +284,7 @@ html {
     }
 
     #honne-image {
+      position: relative;
       width: 280px;
       height: 630px;
       position: relative;
@@ -326,12 +315,6 @@ html {
         bottom: 10%;
       }
     }
-    h1 {
-      z-index: 1;
-      font-size: 8.9vmax;
-      font-family: "poiret one";
-      color: white;
-    }
   }
 
   .honne-container {
@@ -356,18 +339,18 @@ html {
       right: 13.35vw;
       top: 24vw;
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 3vmax;
         height: 1.7px;
         background-color: white;
         position: absolute;
-        right: -5px; 
+        right: -5px;
         top: -1vw;
         transform: rotate(40deg);
       }
       &::before {
-        content: '';
+        content: "";
         display: block;
         width: 3vmax;
         height: 1.7px;
@@ -432,6 +415,9 @@ html {
         left: 1%;
         top: -32px;
       }
+      &:hover {
+        cursor: pointer;
+      }
     }
     #fin-image {
       box-shadow: 0.5px 0.5px 4px rgb(7, 7, 7);
@@ -495,6 +481,9 @@ html {
         right: -70px;
         bottom: 55px;
         transform: rotate(90deg);
+      }
+      &:hover {
+        cursor: pointer;
       }
     }
     #proj-text {
@@ -620,14 +609,22 @@ html {
   }
 }
 
+.modal-content {
+  background-color: red;
+  height: 90vh;
+  width: 90vw;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 @media only screen and(max-width: 800px) {
   svg {
     display: none;
   }
-  .arrow{
-    display: none;
-  }
-  .cursor {
+  .arrow {
     display: none;
   }
   #count {
@@ -637,17 +634,26 @@ html {
   .quote {
     width: 82% !important;
   }
+  #para {
+    small {
+      font-size: 4vw !important;
+    }
+  }
   .content {
     nav {
       width: 90% !important;
       left: -1% !important;
       top: 5% !important;
     }
+
     section {
       height: 93% !important;
       p {
-        margin-bottom: -7vw !important;
-        font-size: 13vw !important;
+        margin-bottom: -4vw !important;
+        font-size: 11.1vw !important;
+        span {
+          font-size: 11.4vw !important;
+        }
       }
     }
   }
