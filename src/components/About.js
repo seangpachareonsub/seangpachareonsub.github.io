@@ -91,7 +91,7 @@ const About = () => {
         data-aos-easing="ease">
         <p>
           When I'm not coding<small>,</small> you can either find me 
-          playing <span>tennis</span> football at 
+          playing football at 
           the <span>World Cup</span> park or
           sipping on <span>whiskey</span> gin or both...
         </p>
