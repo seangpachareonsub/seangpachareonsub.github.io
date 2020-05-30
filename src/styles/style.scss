@@ -27,6 +27,11 @@ html {
   align-items: center;
   background-color: #121212;
 
+  .title-lines {
+    opacity: 0;
+    display: none;
+  }
+
   main {
     height: 100vh;
     width: 100vw;
@@ -152,10 +157,8 @@ html {
         flex-direction: column;
         justify-content: center;
         p {
-          opacity: 0;
-          display: none;
           color: white;
-          font-size: 12vw;
+          font-size: 11.9vw;
           margin-bottom: -6.5vw;
           padding: 0% 5%;
           letter-spacing: 2px;
@@ -169,7 +172,7 @@ html {
           span {
             font-family: "Major Mono Display", monospace;
             color: rgb(150, 149, 149);
-            font-size: 11.3vw;
+            font-size: 12vw;
           }
         }
       }

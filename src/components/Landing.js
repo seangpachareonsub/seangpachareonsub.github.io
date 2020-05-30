@@ -37,7 +37,7 @@ const Landing = ({ showContent }) => {
                 reveal()
               )
             })
-          }, 25)
+          }, 20)
         }
       })
       t1
