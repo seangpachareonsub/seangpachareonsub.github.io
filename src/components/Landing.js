@@ -37,7 +37,7 @@ const Landing = ({ showContent }) => {
                 reveal()
               )
             })
-          }, 20)
+          }, 25)
         }
       })
       t1
@@ -64,7 +64,7 @@ const Landing = ({ showContent }) => {
       .to('.content', 0.7, { width: '100%', ease: Expo.easeInOut })
       .to('.title-lines', 0.1, { display: 'block' })
       .to('.title-lines', 0.6, { opacity: 1, stagger: 0.15, ease: Expo.easeInOut })
-      .to('#scroll, li', 0.4, { opacity: 1 }, '-=0.4')
+      .to('#scroll, li', 0.4, { opacity: 1 }, '-=0.25')
       .to('main', 0.1, { marginBottom: '15vw' })
   }
 
