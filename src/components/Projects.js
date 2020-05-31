@@ -2,14 +2,9 @@ import React, { useEffect, useState } from 'react'
 import hoverEffect from 'hover-effect'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import SiteModal from './SiteModal'
-
-
-
 
 const Projects = () => {
 
-  const [modalOpen, setModalOpen] = useState(false)
   const [projContainer, setProjContainer] = useState(['.honne', '.kap', '.fin', '.pac'])
 
 
@@ -77,8 +72,6 @@ const Projects = () => {
     distort()
   }, [])
 
-  let text
-
   const show = (e) => {
     e.target.firstChild.innerText = 'CLICK TO EXPLORE APP 🧐'
   }
@@ -88,11 +81,6 @@ const Projects = () => {
     const dates = ['15.04.20', '24.03.20', '11.03.20', '20.01.20']
 
     images.map((el, i) => e.target.id === el ? e.target.firstChild.innerText = dates[i] : null)
-
-  }
-
-  const modal = () => {
-    setModalOpen(!modalOpen)
   }
 
 
@@ -106,7 +94,12 @@ const Projects = () => {
         <h1 className='section-title'> <small> (002) </small> Recent Work </h1>
       </div>
 
-
+      <h5 className='text-slider'>
+        <span> 
+        - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - 
+        - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE -
+        </span>
+      </h5>
 
       <div className="honne-container">
         <div data-aos="fade-up"
@@ -154,6 +147,13 @@ const Projects = () => {
           </div>
         </a>
       </div >
+
+      <h5 className='text-slider'>
+        <span> 
+        - KAP - KAP - KAP - KAP - KAP - KAP - KAP - KAP
+        - KAP - KAP - KAP - KAP - KAP - KAP - KAP - KAP - 
+        </span>
+      </h5>
 
       <div className="kap-container">
         <a href="https://ga-kap.herokuapp.com/" target='_blank'>
@@ -208,6 +208,13 @@ const Projects = () => {
         <div className="arrow"></div>
       </div >
 
+      <h5 className='text-slider'>
+        <span> 
+        - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER 
+        - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER -
+        </span>
+      </h5>
+
       <div className="fin-container">
         <a href="http://seangpachareonsub.com/financier/" target='_blank'>
           <div data-aos="fade-up" data-aos-offset="300"
@@ -256,6 +263,13 @@ const Projects = () => {
         <div className="arrow"></div>
       </div >
 
+      <h5 className='text-slider'>
+        <span> 
+        - PACMAN - PACMAN  - PACMAN  - PACMAN  - PACMAN - PACMAN  - PACMAN 
+        - PACMAN - PACMAN  - PACMAN  - PACMAN  - PACMAN - PACMAN  - PACMAN -
+        </span>
+      </h5>
+
       <div className="pac-container">
         <a href="http://seangpachareonsub.com/pac-man/src/index.html" target='_blank'>
           <div data-aos="fade-right" data-aos-offset="300"
@@ -289,8 +303,6 @@ const Projects = () => {
 
 
       <h6> More projects coming soon ... </h6>
-
-      {/* {modalOpen ? <SiteModal /> : null} */}
     </>
   )
 }
