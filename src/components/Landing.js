@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Typist from 'react-typist'
 import { LiquidDistortionText } from 'react-text-fun'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import { TimelineLite, gsap, CSSPlugin, Expo } from 'gsap'
-gsap.registerPlugin( CSSPlugin )
+gsap.registerPlugin(CSSPlugin)
 
 const Landing = ({ showContent }) => {
 
@@ -14,39 +13,18 @@ const Landing = ({ showContent }) => {
 
   useEffect(() => {
     AOS.init()
-  }, [])
 
-  const cursor = {
-    show: true,
-    blink: true,
-    element: '|',
-    hideWhenDone: true,
-    hideWhenDoneDelay: 1000
-  }
-
-  const animate = () => {
-    setTimeout(() => {
-
-      const t1 = new TimelineLite({
-        onComplete: () => {
-          const count = setInterval(() => {
-            setCounter(counter => {
-              counter < 100 ? setCounter(counter + 1) : (
-                clearInterval(count),
-                setCounter(100),
-                reveal()
-              )
-            })
-          }, 25)
-        }
+    const count = setInterval(() => {
+      setCounter(counter => {
+        counter < 100 ? setCounter(counter + 1) : (
+          clearInterval(count),
+          setCounter(100),
+          reveal()
+        )
       })
-      t1
-        .to('.quote', 0.7, { opacity: 0 })
-        .to('quote', 0.1, { display: 'none' })
-        .to('#count', 0.3, { opacity: 1 })
+    }, 25)
 
-    }, 2000)
-  }
+  }, [])
 
 
   const reveal = () => {
@@ -96,20 +74,6 @@ const Landing = ({ showContent }) => {
 
     <main >
       <div className='loading'>
-
-        <div className="quote">
-          <h1> Define My Thoughts </h1>
-          <p>
-            <Typist avgTypingDelay={55} onTypingDone={animate} stdTypingDelay={65} cursor={cursor}>
-              <Typist.Delay ms={1500} />
-              Abstract ideas are concepts that need to be visualized,
-              they cannot be illustrated through real examples.
-              Explaining the progression of logic in a (computer)
-              program will only be possible if the reader can correctly imagine
-              it.
-            </Typist>
-          </p>
-        </div>
 
         <div className="follow"></div>
         <div className='hide' id='progress-bar' style={{ width: counter + '%' }} ></div>

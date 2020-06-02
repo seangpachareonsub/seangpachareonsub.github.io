@@ -45,41 +45,6 @@ html {
       justify-content: center;
       align-items: center;
 
-      .quote {
-        width: 45%;
-        color: white;
-        font-family: "Courier New", Courier, monospace;
-        h1 {
-          border-bottom: 1px solid white;
-          padding-bottom: 4px;
-          margin-bottom: 3%;
-          font-size: 18px;
-        }
-        p {
-          text-align: justify;
-
-          .Typist .Cursor {
-            display: inline;
-            color: white;
-            &--blinking {
-              opacity: 1;
-              animation: blink 0.7s linear infinite;
-              @keyframes blink {
-                0% {
-                  opacity: 1;
-                }
-                50% {
-                  opacity: 0;
-                }
-                100% {
-                  opacity: 1;
-                }
-              }
-            }
-          }
-        }
-      }
-
       #progress-bar {
         position: absolute;
         left: 0;
@@ -93,7 +58,7 @@ html {
         font-size: 130px;
         font-family: "Cormorant Garamond";
         color: rgba(255, 255, 255, 0.94);
-        opacity: 0;
+        // opacity: 0;
         transform: translateY(-15px);
         font-weight: lighter;
       }
@@ -224,7 +189,7 @@ html {
         color: lightsalmon
       }
     }
-    &:nth-of-type(6) {
+    &:nth-of-type(7) {
       margin-bottom: 22vw;
     }
   }
@@ -671,9 +636,6 @@ html {
   #count {
     font-size: 95px !important;
     transform: translateY(-12px) !important;
-  }
-  .quote {
-    width: 82% !important;
   }
   #para {
     small {
