@@ -130,6 +130,7 @@ const Projects = () => {
             <li> Axios </li>
             <li> JSON Web Token </li>
             <li> React Map GL </li>
+            <li> GreenSock Animation Platform </li>
           </ul>
           <br />
           <a href='https://github.com/seangpachareonsub/honne'>
