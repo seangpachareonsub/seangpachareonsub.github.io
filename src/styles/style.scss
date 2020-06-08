@@ -235,7 +235,8 @@ html {
   .honne-container,
   .fin-container,
   .pac-container,
-  .kap-container {
+  .kap-container,
+  .trek-container {
     transition: 0.3s ease-out;
     will-change: transform;
     width: 100vw;
@@ -312,7 +313,7 @@ html {
         box-shadow: 1.2px 1.2px 4px rgb(56, 56, 56);
       }
       &::after {
-        content: "PRJ WRK 001";
+        content: "PRJ WRK 002";
         display: block;
         transform: rotate(-90deg);
         color: rgb(235, 232, 232);
@@ -330,7 +331,8 @@ html {
   }
 
   .fin-container,
-  .kap-container {
+  .kap-container,
+  .trek-container {
     flex-direction: column-reverse;
     align-items: flex-end;
     padding-right: 5%;
@@ -385,7 +387,7 @@ html {
       }
     }
     #proj-text {
-      width: 74%;
+      width: 72%;
       text-align: start;
       transform: translateX(-19%);
       margin-bottom: 5vw;
@@ -402,7 +404,8 @@ html {
     }
 
     #fin-image,
-    #kap-image {
+    #kap-image,
+    #trek-image {
       width: 60vw;
       height: 30vw;
       position: relative;
@@ -414,7 +417,7 @@ html {
         color: rgb(235, 232, 232);
       }
       &::after {
-        content: "PRJ WRK 003";
+        content: "PRJ WRK 004";
         display: block;
         color: rgb(235, 232, 232);
         position: absolute;
@@ -425,10 +428,29 @@ html {
         cursor: pointer;
       }
     }
+
     #fin-image {
       box-shadow: 0.5px 0.5px 4px rgb(7, 7, 7);
     }
   }
+
+  .trek-container {
+
+    #proj-text {
+      h1 {
+        font-family: raleway;
+      }
+    }
+    
+
+    #trek-image {
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
+      &::after {
+        content: "PRJ WRK 001";
+      }
+    }
+  }
+ 
 
   .kap-container {
     flex-direction: column;
@@ -439,9 +461,9 @@ html {
       transform: rotate(120deg);
     }
     #proj-text {
-      width: 60%;
+      width: 58%;
       text-align: start;
-      transform: translateX(-9%);
+      transform: translateX(-7%);
       margin-bottom: -6vw;
       h1 {
         margin-left: -2%;
@@ -457,7 +479,7 @@ html {
     #kap-image {
       box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
       &::after {
-        content: "PRJ WRK 002";
+        content: "PRJ WRK 003";
       }
     }
   }
@@ -480,7 +502,7 @@ html {
         color: rgb(235, 232, 232);
       }
       &::after {
-        content: "PRJ WRK 004";
+        content: "PRJ WRK 005";
         display: block;
         color: rgb(235, 232, 232);
         position: absolute;
@@ -670,7 +692,8 @@ html {
   .honne-container,
   .fin-container,
   .pac-container,
-  .kap-container {
+  .kap-container,
+  .trek-container {
     flex-direction: column !important;
     align-items: center !important;
     padding: 0% !important;
@@ -705,7 +728,8 @@ html {
     }
 
     #fin-image,
-    #kap-image {
+    #kap-image,
+    #trek-image {
       width: 85vw !important;
       height: 45vw !important;
       &::before {
@@ -718,6 +742,7 @@ html {
       width: 86vw;
       height: 45vw;
       margin-top: 15px;
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
     }
 
     #pac-image {
@@ -730,7 +755,8 @@ html {
     flex-direction: column-reverse !important;
   }
 
-  .kap-container {
+  .kap-container,
+  .trek-container {
     #proj-text {
       transform: translate(0) !important;
       align-self: center !important;

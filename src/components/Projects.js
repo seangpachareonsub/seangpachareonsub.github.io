@@ -17,8 +17,8 @@ const Projects = () => {
       image1: 'https://i.imgur.com/2HgFJDD.png',
       image2: 'https://i.imgur.com/uENHP3X.png',
       displacementImage: 'https://i.imgur.com/CyxD9X6.png',
-      speedIn: 1.7,
-      speedOut: 1.7,
+      speedIn: 1.5,
+      speedOut: 1.5,
       imagesRatio: 2.25
     })
 
@@ -29,8 +29,21 @@ const Projects = () => {
       image2: 'https://i.imgur.com/pzvHIdN.png',
       displacementImage: 'https://i.imgur.com/4Os9Q7o.jpg',
       angle: Math.PI / 8,
-      speedIn: 1.7,
-      speedOut: 1.7,
+      speedIn: 1.5,
+      speedOut: 1.5,
+      imagesRatio: 0.5
+    })
+
+
+    new hoverEffect({
+      parent: document.querySelector('#trek-image'),
+      intensity: 0.4,
+      image1: 'https://i.imgur.com/T5hVqYy.png',
+      image2: 'https://i.imgur.com/NyOmmN7.png',
+      displacementImage: 'https://i.imgur.com/4Os9Q7o.jpg',
+      angle: Math.PI / 8,
+      speedIn: 1.5,
+      speedOut: 1.5,
       imagesRatio: 0.5
     })
 
@@ -40,8 +53,8 @@ const Projects = () => {
       image1: 'https://i.imgur.com/LXtbJSv.png',
       image2: 'https://i.imgur.com/2qUvTgr.png',
       displacementImage: 'https://i.imgur.com/CyxD9X6.png',
-      speedIn: 1.7,
-      speedOut: 1.7,
+      speedIn: 1.5,
+      speedOut: 1.5,
       angle: Math.PI / 8,
       imagesRatio: 0.5
     })
@@ -52,8 +65,8 @@ const Projects = () => {
       image1: 'https://i.imgur.com/kXiOi5j.png',
       image2: 'https://i.imgur.com/SbYPbw4.png',
       displacementImage: 'https://i.imgur.com/4Os9Q7o.jpg',
-      speedIn: 1.7,
-      speedOut: 1.7,
+      speedIn: 1.5,
+      speedOut: 1.5,
       angle: Math.PI / 5,
       imagesRatio: 1.17
     })
@@ -94,10 +107,71 @@ const Projects = () => {
         <h1 className='section-title'> <small> (002) </small> Recent Work </h1>
       </div>
 
+
       <h5 className='text-slider'>
-        <span> 
-        - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - 
-        - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE -
+        <span>
+          - TREK - TREK - TREK - TREK - TREK - TREK - TREK - TREK
+          - TREK - TREK - TREK - TREK - TREK - TREK - TREK - TREK -
+        </span>
+      </h5>
+
+      <div className="trek-container">
+        <div data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease" id="trek-image">
+          <p> 03.06.20 </p>
+        </div>
+
+        <img data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="800" data-aos-easing="ease"
+          src="https://i.imgur.com/NyOmmN7.png" alt="" />
+
+        <div data-aos="fade-up" data-aos-offset="300"
+          data-aos-duration="1000" data-aos-easing="ease"
+          id='proj-text'>
+
+          <h1> Trek </h1>
+          <div>
+
+          </div>
+          <p > <small> PRJ CONCPT </small> <br />
+            An individual effort creating a social travel app consuming TFL's public API and allows 
+            users to plan journeys as well as check for live travel updates. The app will include a social 
+            feature where users can post pictures and statuses mimicking a social media platform.
+            <br /> <br />
+            Trek is currently in the early stages of development and is an ongoing project I am 
+            focusing on. Please visit the GitHub repository to follow the progression of the app.
+          </p>
+          <br />
+          <small> TECH BEING IMPLEMENTED</small>
+          <ul>
+            <li> React.js </li>
+            <li> JavaScript (ES6) </li>
+            <li> MongoDB </li>
+            <li> Mongoose </li>
+            <li> Node.js </li>
+            <li> Express.js</li>
+            <li> HTML5/SASS </li>
+            <li> GreenSock Animation Platform </li>
+            <li> React Map GL </li>
+            <li> Axios </li>
+            <li> JSON Web Token </li>
+          </ul>
+          <br />
+          <a href='https://github.com/seangpachareonsub/trek'>
+            <ion-icon name="logo-github"></ion-icon> VIEW REPO </a>
+        </div>
+        <svg id='circle-1' width="23vw" height="23vw" className="circle">
+          <circle cx="11.5vw" cy="11.5vw" r="11.4vw" />
+        </svg>
+        <div className="arrow"></div>
+      </div >
+
+
+
+      <h5 className='text-slider'>
+        <span>
+          - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE
+          - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE - HONNE -
         </span>
       </h5>
 
@@ -150,9 +224,9 @@ const Projects = () => {
       </div >
 
       <h5 className='text-slider'>
-        <span> 
-        - KAP - KAP - KAP - KAP - KAP - KAP - KAP - KAP
-        - KAP - KAP - KAP - KAP - KAP - KAP - KAP - KAP - 
+        <span>
+          - KAP - KAP - KAP - KAP - KAP - KAP - KAP - KAP
+          - KAP - KAP - KAP - KAP - KAP - KAP - KAP - KAP -
         </span>
       </h5>
 
@@ -210,9 +284,9 @@ const Projects = () => {
       </div >
 
       <h5 className='text-slider'>
-        <span> 
-        - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER 
-        - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER -
+        <span>
+          - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER
+          - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER - FINANCIER -
         </span>
       </h5>
 
@@ -265,9 +339,9 @@ const Projects = () => {
       </div >
 
       <h5 className='text-slider'>
-        <span> 
-        - PACMAN - PACMAN  - PACMAN  - PACMAN  - PACMAN - PACMAN  - PACMAN 
-        - PACMAN - PACMAN  - PACMAN  - PACMAN  - PACMAN - PACMAN  - PACMAN -
+        <span>
+          - PACMAN - PACMAN  - PACMAN  - PACMAN  - PACMAN - PACMAN  - PACMAN
+          - PACMAN - PACMAN  - PACMAN  - PACMAN  - PACMAN - PACMAN  - PACMAN -
         </span>
       </h5>
 
