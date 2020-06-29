@@ -74,11 +74,9 @@ const Landing = ({ showContent }) => {
 
     <main >
       <div className='loading'>
-
         <div className="follow"></div>
         <div className='hide' id='progress-bar' style={{ width: counter + '%' }} ></div>
-        <p id='count' className='hide'> 0 {counter}% </p>
-
+        <p id='count' className='hide'> {counter}% </p>
       </div>
 
 

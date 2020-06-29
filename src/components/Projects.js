@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'
 
 const Projects = () => {
 
-  const [projContainer, setProjContainer] = useState(['.honne', '.kap', '.fin', '.pac'])
+  const [projContainer, setProjContainer] = useState(['.trek', '.honne', '.kap', '.fin', '.pac'])
 
 
   useEffect(() => {
@@ -138,8 +138,8 @@ const Projects = () => {
             users to plan journeys as well as check for live travel updates. The app will include a social 
             feature where users can post pictures and statuses mimicking a social media platform.
             <br /> <br />
-            Trek is currently in the early stages of development and is an ongoing project I am 
-            focusing on. Please visit the GitHub repository to follow the progression of the app.
+            Trek is not currently live but is in the early stages of development and below are the first mockups and drafts of the application. 
+            Please visit the GitHub repository to follow the progression of the app.
           </p>
           <br />
           <small> TECH BEING IMPLEMENTED</small>

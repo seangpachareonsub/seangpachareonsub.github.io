@@ -216,7 +216,6 @@ html {
       -webkit-text-stroke: 1px lightsalmon;
       -webkit-text-fill-color: lightsalmon;
       font-style: italic;
-      cursor: pointer;
       text-decoration: line-through;
     }
   }
@@ -248,6 +247,7 @@ html {
     img {
       display: none;
       position: relative;
+      
     }
 
     #proj-text {
@@ -440,13 +440,18 @@ html {
       h1 {
         font-family: raleway;
       }
+
     }
     
 
     #trek-image {
       box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
+      // clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
       &::after {
         content: "PRJ WRK 001";
+      }
+      &:hover {
+        cursor: initial;
       }
     }
   }
