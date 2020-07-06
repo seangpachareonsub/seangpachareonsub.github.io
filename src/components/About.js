@@ -52,10 +52,9 @@ const About = () => {
         data-aos-offset="250"
         data-aos-easing="ease">
         <p >
-          Beyond cultivating my ability to write good code<small>,</small>
-          I am currently learning Redux<small>,</small> Jest and basic UX
-          design to further
-          my <span>back</span> front-end focus.
+          I am currently learning Redux and Jest to further
+          my <span>back</span> front-end focus while developing my concept of Honne into a native 
+          mobile application using <span>Swift</span> React Native.
         </p>
       </div>
 
