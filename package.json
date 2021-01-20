@@ -30,7 +30,7 @@
     "aos": "^3.0.0-beta.6",
     "bulma": "^0.7.5",
     "emailjs-com": "^2.4.1",
-    "gsap": "^3.3.4",
+    "gsap": "^3.6.0",
     "hover-effect": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
